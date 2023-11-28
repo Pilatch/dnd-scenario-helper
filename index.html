@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Pilatch on AWS</title>
+	<meta name="description" content="Pilatch learning about how to host on AWS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="./main.js"></script>
+	<meta name="theme-color" content="#fafafa">
+	<style>
+		summary {
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		details ::marker,
+		details ::-webkit-details-marker {
+			display: none;
+			content: '';
+		}
+
+		details {
+			margin-bottom: 0.5em;
+			margin-left: 1em;
+		}
+
+		li {
+			margin: 0;
+		}
+
+		ul {
+			margin: 0.5em 0 0 0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="elmApp"></div>
+</body>
+<script>
+	Elm.Main.init({ node: elmApp })
+</script>
+
+</html>
