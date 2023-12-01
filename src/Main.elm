@@ -1,8 +1,10 @@
 module Main exposing (main)
 
 import Browser exposing (sandbox)
-import Fixtures
 import Scenarios.DwarvenExcavation
+import Scenarios.GoblinMine
+import Scenarios.LavendarSpiders
+import Towns
 import Update exposing (update)
 import View exposing (view)
 
@@ -10,8 +12,12 @@ import View exposing (view)
 main =
     sandbox
         { init =
-            { towns = [ Fixtures.phandalin ]
-            , scenarios = [ Scenarios.DwarvenExcavation.dwarvenExcavation ]
+            { towns = [ Towns.phandalin ]
+            , scenarios =
+                [ Scenarios.DwarvenExcavation.dwarvenExcavation
+                , Scenarios.LavendarSpiders.lavendarSpiders
+                , Scenarios.GoblinMine.goblinMine
+                ]
             }
         , view = view
         , update = update

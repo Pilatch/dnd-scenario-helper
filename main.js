@@ -4506,7 +4506,169 @@ var $author$project$Scenarios$DwarvenExcavation$dwarvenExcavation = {
 		[$author$project$Scenarios$DwarvenExcavation$canyonEntrance]),
 	name: 'Dwarven Excavation'
 };
-var $author$project$Characters$adabra = {age: 61, description: '\n    Adabra has long, kinky gray hair that she lets flow about, and never seems to mind if it\'s in front or her face, or gets in the way.\n    She carries a big pouch slung around her shoulder that\'s fragrant with the herbs she collect as she stolls about.\n    Midwife and apothecary devote to Chauntea (goddess of agriculture).\n    ', hitPoints: 4, name: 'Adabra Gynn'};
+var $author$project$Monsters$Goblins$crankleTheCrotchety = {age: 61, description: '\n    An old goblin with milky eyes that probably should have died a long time ago.\n    He leans on a cane and has a horrible bend to his back.\n    ---\n    He speaks fluent common, and doesn\'t want to speak goblin.\n    If the characters ignore him, he\'ll follow them around, complaining about everything they do.\n    Then if the characters let him get too close, he\'ll try to stab them in the back with a dagger, 1d4 - 1 piercing damage.\n    ', hitPoints: 2, name: 'Crankle The Crotchety'};
+var $author$project$Monsters$Goblins$grabbeyTheDiaperWagger = {age: 0, description: '\n    A tiny goblin with a dirty diaper, which he wags at the characters.\n    He gestures towards the marble sand-pit, inviting them to play.\n    If he loses at marbles, he throws his diaper at them.\n    ---\n    If the characters attack him, he runs away, leaving his diaper behind.\n    ', hitPoints: 1, name: 'Grabbey The Diaper Wagger'};
+var $author$project$Characters$delilah = {age: 5, description: '\n    Solid black, gentle dairy cow.\n    Poops a little bit when frightened.\n    Her milk production is starting to drop.\n    ', hitPoints: 9, name: 'Delilah the cow'};
+var $author$project$Monsters$Goblins$ultraGourmande = {age: 20, description: '\n    A goblin with a big belly, and a big appetite.\n    She\'s wearing a chef\'s hat.\n    ', hitPoints: 5, name: 'Ultra Gourmande'};
+var $author$project$Scenarios$GoblinMine$kitchen = {
+	adjoining: $author$project$Types$DeadEnd,
+	characters: _List_fromArray(
+		[$author$project$Monsters$Goblins$ultraGourmande, $author$project$Characters$delilah]),
+	description: '\n    This room is filled with soiled pots and pans.\n    A black cow stands in the center, tied to a cupboard under the counter.\n    A bucket is under her udder, but there\'s not much milk in it.\n    Has long countertops with all manner of knives and cooking implements.\n    In one corner a fire is burning under a stove.\n    A pot simmers atop that with what looks like squirrels\' tails sticking out of it.\n    The smell is dreadful.\n    In one corner is a sack of rice, and barrels of ale and wine.\n    Next to that, on the floor is a low, metal circular dish with a little water in it, and a gnawed bone next to it.\n    There\'s a large vase of water near the counter.\n    There are a couple cucumbers on the counter too.\n    ---\n    One especially fat goblin is sharpening a knife and looking at the cow.\n    ',
+	name: 'Kitchen'
+};
+var $author$project$Monsters$Goblins$oculusTheRecordKeeper = {age: 33, description: '\n    A goblin with bulbous eyes, one of which is behind a jewler\'s loupe as he inspects some ore.\n    In his other hand he holds a book, while gritting an inked quill between his teeth.\n    ', hitPoints: 4, name: 'Oculus The Record Keeper'};
+var $author$project$Scenarios$GoblinMine$privy = {
+	adjoining: $author$project$Types$DeadEnd,
+	characters: _List_fromArray(
+		[$author$project$Monsters$Goblins$oculusTheRecordKeeper]),
+	description: '\n    This room actually has doors.\n    A smelly room with two cubic recepticles at the far end,\n    each with two rectangles that suggest where one put their feet.\n    The recepticles have holes that go down very, very far.\n    ---\n    Oculus is there, reading his book with his pants down.\n    He immediately escapes by squeezing through a tiny tunnel.\n    ',
+	name: 'Privy'
+};
+var $author$project$Scenarios$GoblinMine$dormitory = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$privy, $author$project$Scenarios$GoblinMine$kitchen])),
+	characters: _List_fromArray(
+		[$author$project$Monsters$Goblins$crankleTheCrotchety, $author$project$Monsters$Goblins$grabbeyTheDiaperWagger]),
+	description: '\n    This room is filled with bunk beds, and a few chests.\n    There\'s a large run running down the middle of the room, with big tassles on the corners.\n    On one end of the room is a hearth with a fire burning.\n    In front of the hearth is a sand circle with marbles strewn about.\n    Not far from that is a battered rocking-horse.\n    There is a large wooden table against the far wall, with one chair at the head of the table larger than the others.\n    Crankle, speaking in only common, was scolding Grabbey about cheating at marbles before he noticed the players.\n    You can hear a bleating noise coming from the far left corner of the room.\n    ---\n    One chest is locked, and contains 50 gp, and a potion of healing.\n    The key is under the rug.\n    The other chests are filled with clothes, and personal effects.\n    ',
+	name: 'Dormitory'
+};
+var $author$project$Monsters$Goblins$bearBelchTheBelcher = {age: 10, description: 'A goblin with a penchant for belching.', hitPoints: 7, name: 'Bear Belch The Belcher'};
+var $author$project$Scenarios$GoblinMine$collapsedProspect = {adjoining: $author$project$Types$DeadEnd, characters: _List_Nil, description: '\n    This room is filled with rubble, and a few goblins are digging through it.\n    ', name: 'Collapsed Prospect'};
+var $author$project$Scenarios$GoblinMine$dampChamber = {adjoining: $author$project$Types$DeadEnd, characters: _List_Nil, description: '\n    Down a twisted, roughly hewn passage is a room with a pool of water, a steady drip from the ceiling, and wooden beams propping up the walls and ceiling.\n    Inside is a huddled child, dressed in a burlap sac.\n    He\'s trying to break his shackles with a rock.\n    His name is Bobby.\n    ', name: 'Damp Chamber'};
+var $author$project$Scenarios$GoblinMine$dustyStoreRoom = {adjoining: $author$project$Types$DeadEnd, characters: _List_Nil, description: '\n    This room has one dusty crate in a corner with red lettering on it, in what appears to be Dwarven.\n    A pool of water is in the opposite corner, in a depression in the floor.\n    The other walls are propped up with timers, and sagging.\n    ---\n    It reads: Explosives.\n    Does 3d6 bludgeoning damage in a 10 foot radius, and ignites things not worn or carried.\n\n    ', name: 'Dusty Store Room'};
+var $author$project$Monsters$Goblins$worg = {age: 4, description: '\n    A gray-furred beast vaguely resembling a large wolf, but with a more viscious stare, larger jaw, and bare face and snout.\n    This is a young worg, large enough for a small goblin to ride, but perhaps too small for the big goblin holding its leash.\n    ---\n    On a successful DC 10 Nature check, a character recognizes its ribs are showing a bit.\n    A worg is an evil predator that delights in hunting and devouring creatures weaker than itself.\n    It is a keen hunter that prefers live prey, and it attacks with its powerful jaws and sharp teeth.\n    ', hitPoints: 29, name: 'Worg'};
+var $author$project$Scenarios$GoblinMine$giantMiningChamber = {
+	adjoining: $author$project$Types$DeadEnd,
+	characters: _List_fromArray(
+		[$author$project$Monsters$Goblins$worg]),
+	description: '\n    This room is huge, and its sagging ceiling is supported by thick beams placed throughout.\n    There are wooden beams propping up the walls and ceiling.\n    There are a few goblins in here, digging.\n    Also digging is Telly Scornlove and Erwin and Emma, dressed in burlap sacks.\n    ',
+	name: 'Giant Mining Chamber'
+};
+var $author$project$Monsters$Goblins$krudrukTheThirsty = {age: 25, description: 'A goblin who is always thirsty.', hitPoints: 3, name: 'Krudruk The Thirsty'};
+var $author$project$Scenarios$GoblinMine$longTunnel = {adjoining: $author$project$Types$DeadEnd, characters: _List_Nil, description: '\n    This tunnel is long, dark, and winding.  At the end is a pool of water.  There are fish swimming in there!\n    Inside is Old Bill, trying to catch a fish with his bare hands.\n    ', name: 'Long Tunnel'};
+var $author$project$Monsters$Goblins$redEyeTheLazy = {age: 30, description: 'A goblin who is lazy. Even lazier than most.', hitPoints: 4, name: 'Red Eye The Lazy'};
+var $author$project$Scenarios$GoblinMine$greatRoom = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$dustyStoreRoom, $author$project$Scenarios$GoblinMine$dampChamber, $author$project$Scenarios$GoblinMine$collapsedProspect, $author$project$Scenarios$GoblinMine$longTunnel, $author$project$Scenarios$GoblinMine$giantMiningChamber])),
+	characters: _List_fromArray(
+		[$author$project$Monsters$Goblins$oculusTheRecordKeeper, $author$project$Monsters$Goblins$krudrukTheThirsty, $author$project$Monsters$Goblins$redEyeTheLazy, $author$project$Monsters$Goblins$bearBelchTheBelcher]),
+	description: '\n    This room is large, and has three braziers burning near the right wall.\n    There are a three goblins sitting around the table, playing a game of dice.\n    Oculus is inspecting shackles, and flees when he notices the characters.\n    ---\n    When the goblins at the table notice the characters, they will attack, overturning the table to provide themselves with cover,\n    but the table, being circular, and the ground not being level, starts to roll.\n    They awkwardly try to remain behind the table while shooting arrows, and bicker with each other about who can retain cover.\n    ',
+	name: 'Great Room'
+};
+var $author$project$Monsters$Goblins$wormFingersTheSlimy = {age: 8, description: 'A goblin who is always picking his nose.', hitPoints: 10, name: 'Worm Fingers The Slimy'};
+var $author$project$Scenarios$GoblinMine$hallwayOfFailedProspects = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$greatRoom])),
+	characters: _List_fromArray(
+		[$author$project$Monsters$Goblins$wormFingersTheSlimy]),
+	description: '\n    This hallway has a few offshoots.\n    1st on the left has a goblin using a pickaxe to chip away at the wall, but not finding anything of value, getting bored, and picking his nose.\n    2nd on the right has a couple of areas that lead to cave-ins.\n    3rd on the left has a small puddle, with water dripping from the ceiling.\n    ---\n    Worm Fingers is in the 1st room, and will attack if the players get too close.\n    ',
+	name: 'Hallway of Failed Prospects'
+};
+var $author$project$Scenarios$GoblinMine$shrineToKhurgorbaeyag = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$hallwayOfFailedProspects])),
+	characters: _List_Nil,
+	description: '\n    A shrine to Khurgorbaeyag, the god of goblin slavers, stands in the center of this room, flanked by flaming sconces.\n    There used to be something else here, but it must have been destroyed, and chipped away from the wall and replaced by a crude carving of the goblin god.\n    A whip is placed before the visage of this god on a step before the shrine.\n    ---\n    A player must say that they look at the ceiling to see the netting.\n    DC 15 Dexterity save to not be ensnared, if pick up the whip, which triggers the netting to fall and a loud bell to ring.\n    ',
+	name: 'Shrine to Khurgorbaeyag'
+};
+var $author$project$Scenarios$GoblinMine$strangeTrophies = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$shrineToKhurgorbaeyag, $author$project$Scenarios$GoblinMine$dormitory])),
+	characters: _List_Nil,
+	description: '\n    On either side of this room are two large logs, high up on the walls, or maybe one log that was sawed in half?\n    It seems like they\'re mounted to opposite walls as if they were hunting trophies?\n    Stemming from this room are two corridors. One is dark and at the end of the other is a flame flickering in a sconce.\n    ---\n    DC 12 Perception check to detect the tripline.\n    Tripping the trap results in 1d6 bludgeoning damage on failed DC 12 Dexterity saving throw, half on successful.\n    ',
+	name: 'Strange Trophies'
+};
+var $author$project$Scenarios$GoblinMine$abandonedMineLanding = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$strangeTrophies])),
+	characters: _List_Nil,
+	description: '\n    When the platform is fully lowered it\'s on one side of a room with mining equipment.\n    The wheelbarrows, shovels, and picks look like they\'ve seen recent use.\n    However, a mining helmet on the ground is covered in a thick layer of dust.\n    ',
+	name: 'Abandoned Mine Landing'
+};
+var $author$project$Scenarios$GoblinMine$abandonedMineLift = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$abandonedMineLanding])),
+	characters: _List_Nil,
+	description: '\n    A wooden platform hangs from a thick rope, which is wrapped around a large wooden spool.\n    The spool is attached to a wooden frame, which is attached to a large wooden wheel.\n    ',
+	name: 'Abandoned Mine Lift'
+};
+var $author$project$Scenarios$GoblinMine$abandonedMineEntrance = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$abandonedMineLift])),
+	characters: _List_Nil,
+	description: '\n    Cut into the slope of a mossy hill is a stone arch.\n    A great tree has grown into the hillside above it, roots wrapping around the arch like tentacles.\n    ',
+	name: 'Abandoned Mine Entrance'
+};
+var $author$project$Monsters$Goblins$digrikTheAngry = {age: 20, description: 'An angry goblin.', hitPoints: 5, name: 'Digrik The Angry'};
+var $author$project$Monsters$Goblins$stargTheLeaping = {age: 12, description: '\n    Starg is tall for a goblin, at 4\' 2" tall, and has a long, thin face with a large nose.\n    ', hitPoints: 4, name: 'Starg The Leaping'};
+var $author$project$Scenarios$GoblinMine$goblinWatchTower = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$abandonedMineEntrance])),
+	characters: _List_fromArray(
+		[$author$project$Monsters$Goblins$stargTheLeaping, $author$project$Monsters$Goblins$digrikTheAngry]),
+	description: '\n    A wooden tower stands on a hill in an oxbow of the stream, overlooking the forest, and what used to be part of the forest.\n    The trees have been cut down, and the ground is covered in stumps.\n    The tower looks shoddy, and hastily built.\n    Behind the watch tower is a long rope that has been staked into the ground, and is taut.\n    ',
+	name: 'Goblin Watch Tower'
+};
+var $author$project$Scenarios$GoblinMine$phandalinWithMissingPeopleJobBoard = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$GoblinMine$goblinWatchTower])),
+	characters: _List_Nil,
+	description: '\n    See the town of Phandalin.\n    Only difference is the job board, and Dazlyn and Norbus are in the Stonehill Inn.\n    ',
+	name: 'Phandalin'
+};
+var $author$project$Scenarios$GoblinMine$goblinMine = {
+	description: '\n    The job board outside the townsmaster\'s hall is filled with posters of loved ones, offering small rewards.\n    Erwin and Emma, twins, teenage children of a local farmer, have gone missing. Reward is 100gp. Last seen heading North to Neverwinter.\n    Bobby Brinwild, reward is 10gp.\n    Telly Scornlove, reward is 5gp.\n    Deliah the cow is missing. Reward is 8sp.\n    Old Bill is missing, but there\'s not a reward for him.\n    There are other faded and tattered posters that aren\'t legible.\n    ',
+	locations: _List_fromArray(
+		[$author$project$Scenarios$GoblinMine$phandalinWithMissingPeopleJobBoard]),
+	name: 'Goblin Mine'
+};
+var $author$project$Characters$eliza = {age: 30, description: '\n    A female human who teaches young childen in Phandalin how to read and write.\n    She has straight brown hair, freckles, and intense, dark eyes.\n    Married to Yarvun.  Mother to Joanna.\n    ---\n    Furious with Harbin Wester that he hasn\'t done more to find her missing husband.\n    Even more furious now that her daughter has gone off to find him that morning, because Eliza is not sure of secret location of the lavendar farm.\n    ---\n    If asked to join the search for her daughter, she says that her place is here in town, in case Joanna returns.\n    She will continue to ask for help.\n    ', hitPoints: 4, name: 'Eliza Rockgarden'};
+var $author$project$Monsters$GiantSpiders$creviceDwellingGiantSpider = {age: 8, description: '\n    A spider the size of a large person with dark furry legs and red splotches along its back.\n    ', hitPoints: 30, name: 'Crevice Dwelling Giant Spider'};
+var $author$project$Monsters$Goblins$deadGoblinKilledBySpiderInCrevice = {age: 10, description: '\n    A dead goblin killed by a spider in a crevice. It\'s wrapped tightly in webbing.\n    ---\n    If the characters cut the goblin free, they find a small pouch containing 3d6 cp, and a dagger.\n    Also in its pocket is a small chuck of dark rock with shiny metallic spots.\n    On a successful DC 10 Nature check, the character recognizes it as a piece of unrefined silver ore.\n    ', hitPoints: 0, name: 'Dead Goblin Killed By Spider In Crevice'};
+var $author$project$Characters$joanna = {age: 8, description: '\n    A female human child who is the daughter of Yarvun and Eliza.\n    Straight brown hair and lots of freckles on her face.\n    ---\n    Went to find her father at the secret grotto where lavendar grows.\n    Recently captured by giant spiders in the grotto. Still alive, but paralyzed.\n    ', hitPoints: 1, name: 'Joanna Rockgarden'};
+var $author$project$Characters$yarvun = {age: 34, description: '\n    A male human farmer who cultivates and harvests herbs.\n    Married to Eliza.  Father to Joanna.\n    Disappeared three days ago.\n    Has been providing Adabra Gynn with herbs for years.\n    Knows a secret location where lavendar grows in large quantity.\n    ---\n    Captured by giant spiders in the grotto.\n    Dead.\n    ', hitPoints: 0, name: 'Yarvun Rockgarden'};
+var $author$project$Scenarios$LavendarSpiders$grotto = {
+	adjoining: $author$project$Types$DeadEnd,
+	characters: _List_fromArray(
+		[$author$project$Monsters$GiantSpiders$creviceDwellingGiantSpider, $author$project$Characters$joanna, $author$project$Characters$yarvun, $author$project$Monsters$Goblins$deadGoblinKilledBySpiderInCrevice]),
+	description: '\n    A shear rock face extends from the ground, about twenty-five feet high.\n    In the center of its base is a shallow, carved depression.\n    There stands what remains of a crumbled stone idol.\n    All around the rock wall, sprigs of lavendar grow.\n    It\'s shaded and cool here, with a rich herbal aroma.\n    This part of the forest is eerily quiet.\n    ---\n    If the players are perceptive, they notice a crevice in the rock face, about 15 feet up, and five feet at its widest.\n    If they are especially perceptive, with a DC 15 perception check, especially if they\'re looking at the ground, they\'ll notice find silk strands among the moss.\n    ---\n    The rock face is rough and can be climed with a DC10 athletics check.\n    ---\n    The crevice is where the spider is hiding, along with its victims, which are bundled up in webbing.\n    ',
+	name: 'Lavendar Grotto'
+};
+var $author$project$Scenarios$LavendarSpiders$newShoes = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$LavendarSpiders$grotto])),
+	characters: _List_Nil,
+	description: '\n    On a trail heading southeast, there is a place where the ground gets soft with lush moss.\n    There on the ground is a pair of leather boots, small enough for a child.\n    A ways off to the east (left) of the trail, you can hear the babbling of a stream, or perhaps a small waterfall.\n    ',
+	name: 'New Shoes'
+};
+var $author$project$Scenarios$LavendarSpiders$batteringHarbinsDoor = {
+	adjoining: $author$project$Types$Adjoining(
+		_List_fromArray(
+			[$author$project$Scenarios$LavendarSpiders$newShoes])),
+	characters: _List_fromArray(
+		[$author$project$Characters$eliza]),
+	description: '\n    Eliza is banging on Harbin\'s door at the townmaster\'s hall.\n    He refuses to come outside of course.\n    ---\n    If asked, she explains that her husband Yarvun, and daughter Joanna have gone missing.\n    Joanna just this morning.\n    ---\n    If she had to guess, it\'s that Joanna went looking for her father.\n    Yarvun always headed out southeast when he went to pick Lavendar.\n    ',
+	name: 'Battering Harbin\'s Door'
+};
+var $author$project$Scenarios$LavendarSpiders$lavendarSpiders = {
+	description: '\n    Yarvun and his daughter Joanna have gone missing.\n    Eliza is furous with Harbin Wester for not doing enough about it.\n    ',
+	locations: _List_fromArray(
+		[$author$project$Scenarios$LavendarSpiders$batteringHarbinsDoor]),
+	name: 'Lavendar Spiders'
+};
+var $author$project$Characters$adabra = {age: 61, description: '\n    Adabra has long, kinky gray hair that she lets flow about, and never seems to mind if it\'s in front or her face, or gets in the way.\n    She carries a big pouch slung around her shoulder that\'s fragrant with the herbs she collect as she stolls about.\n    ---\n    Midwife and apothecary devote to Chauntea (goddess of agriculture).\n    ---\n    If asked, she complains that she hasn\'t been able to brew any healing potions recently, as Yarvun has gone missing, and he supplies her with the lavendar she needs.\n    If asked where one would find lavendar, she says it prefers to grow in sandy, rocky soil.\n    ---\n    Someone else in town will explain that if you follow the stream southeast, the soil gets rougher like that up a steep incline.\n    Along the stream at that point lavendar grows near the edge of a cliff.\n    If the characters follow the cliff downward, they find the grotto.\n    ', hitPoints: 4, name: 'Adabra Gynn'};
 var $author$project$Characters$ander = {age: 17, description: '\n    Lean, tall and friendly with calloused hands.\n    Never in a rush.\n    Likes to wear a wide-brimmer hat.\n    ', hitPoints: 3, name: 'Ander Barthen'};
 var $author$project$Characters$elmar = {age: 50, description: 'Lean balding man who likes to whistle.', hitPoints: 4, name: 'Elmar Barthen'};
 var $author$project$Characters$thistle = {age: 15, description: '\n    Shorter and muscular.\n    Sometimes impatient.\n    Wears gloves.\n    Thinks he needs to prove himself so that one day he\'ll inherit the store, rather than his older brother Ander.\n    ', hitPoints: 4, name: 'Thistle Barthen'};
@@ -4520,7 +4682,6 @@ var $author$project$Establishments$barthensProvisions = {
 			{character: $author$project$Characters$thistle, position: 'Clerk'}
 		])
 };
-var $author$project$Characters$delilah = {age: 5, description: '\n    Solid black, gentle dairy cow.\n    Poops a little bit when frightened.\n    Her milk production is starting to drop.\n    ', hitPoints: 9, name: 'Delilah the cow'};
 var $author$project$Characters$harbin = {age: 38, description: '\n    Cowardly blond man who hides behind the town hall\'s door and speaks through the eye-slit.\n    Maintains the quest board outside.\n    Is deathly terrified of the white dragon that\'s been recently spotted in the area.\n    Slides coins under the door as payment for completed quests.\n    ', hitPoints: 3, name: 'Harbin Wester'};
 var $author$project$Characters$john = {age: 51, description: 'Friendly but quiet human who farms. Married to Martha Boven.', hitPoints: 4, name: 'John Boven'};
 var $author$project$Characters$linene = {age: 35, description: '\n    A sharp-tongued woman who tells tales she heard.\n    Won\'t sell to anyone she thinks is a threat to the town.\n    ', hitPoints: 5, name: 'Linene Graywind'};
@@ -4562,14 +4723,14 @@ var $author$project$Establishments$townsmastersHall = {
 			{character: $author$project$Characters$harbin, position: 'Townsmaster'}
 		])
 };
-var $author$project$Fixtures$phandalin = {
-	description: '\n    Features some new, log buildings surrounded by old stone ruins.\n    Beyond are the forested foothills to the snow-capped Sword Mountain range.\n    Nestled in th erocky foothills of the snow-capped Sword Mountain range is the town of Phandalin.\n    It\'s forty to fifvy simple log buildings.\n    Crumbling stone ruins surround the newer houses and shops, showing how this must have been a much larger town long ago.\n    The town has no walls nor garrison.\n    At the center of town a two-story inn stands out.\n    A couple doors down is the townmaster\'s hall with its job board posted outside.\n    ',
+var $author$project$Towns$phandalin = {
+	description: '\n    Nestled in the rocky foothills of the snow-capped Sword Mountain range is the town of Phandalin.\n    Beyond are the forested foothills to the snow-capped Sword Mountain range.\n    Features some new, log buildings surrounded by old stone ruins.\n    It\'s forty to fifvy simple log buildings.\n    Crumbling stone ruins surround the newer houses and shops, showing how this must have been a much larger town long ago.\n    The town has no walls nor garrison.\n    At the center of town a two-story inn stands out.\n    A couple doors down is the townmaster\'s hall with its job board posted outside.\n    ---\n    Job board has has notices of missing persons:\n    Erwin and Emma Northheath (young men/women, twins, last seen heading to school in Neverwinter)\n    Delilah the cow\n    Some random kid\'s marbles\n\n    ---\n    For lavendar thing:\n    Yarvin Rockgarden,\n    ',
 	establishments: _List_fromArray(
 		[$author$project$Establishments$lionsShieldCoster, $author$project$Establishments$barthensProvisions, $author$project$Establishments$stonehillInn, $author$project$Establishments$townsmastersHall, $author$project$Establishments$minersExchange, $author$project$Establishments$shrineOfLuck]),
 	lore: '\n    This frontier town is build on the ruins of a much older settlement.\n    Hundreds of years ago, the old Phandalin was a thriving human town whose people were firmly aligned with neighboring dwarves and gnomes.\n    Then an orc horde swept through the area and laid waste to the settlement, and Phandalin was abandoned for centuries.\n    In the last 3-4 years, settlers from the cities of Neverwinter and Waterdeep have begun the hard work of reclaiming the ruins of phandalin.\n    The new settlement is home to farmers, woodcutters, smiths, fur traders, and prospectors drawn by stories of gold and platinum in the foothills of the Sword Mountains.\n    Most adult residents keep weapons handy should the need arise.\n    ',
 	name: 'Phandalin',
 	residents: _List_fromArray(
-		[$author$project$Characters$adabra, $author$project$Characters$dazlyn, $author$project$Characters$norbus, $author$project$Characters$harbin, $author$project$Characters$martha, $author$project$Characters$john, $author$project$Characters$delilah, $author$project$Characters$linene, $author$project$Characters$elmar, $author$project$Characters$ander, $author$project$Characters$thistle, $author$project$Characters$tablen])
+		[$author$project$Characters$adabra, $author$project$Characters$ander, $author$project$Characters$dazlyn, $author$project$Characters$delilah, $author$project$Characters$eliza, $author$project$Characters$elmar, $author$project$Characters$harbin, $author$project$Characters$joanna, $author$project$Characters$john, $author$project$Characters$linene, $author$project$Characters$martha, $author$project$Characters$norbus, $author$project$Characters$tablen, $author$project$Characters$thistle, $author$project$Characters$yarvun])
 };
 var $elm$core$Result$Err = function (a) {
 	return {$: 'Err', a: a};
@@ -5315,6 +5476,30 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$p = _VirtualDom_node('p');
+var $elm$html$Html$section = _VirtualDom_node('section');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$View$descriptionParagraphs = function (descriptionText) {
+	return A2(
+		$elm$html$Html$section,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('description')
+			]),
+		A2(
+			$elm$core$List$map,
+			function (textSection) {
+				return A2(
+					$elm$html$Html$p,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$text(textSection)
+						]));
+			},
+			A2($elm$core$String$split, '---', descriptionText)));
+};
 var $elm$html$Html$details = _VirtualDom_node('details');
 var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$input = _VirtualDom_node('input');
@@ -5339,10 +5524,7 @@ var $author$project$View$hitPointsInput = function (max) {
 			]),
 		_List_Nil);
 };
-var $elm$html$Html$p = _VirtualDom_node('p');
 var $elm$html$Html$summary = _VirtualDom_node('summary');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$View$character = function (_v0) {
 	var name = _v0.name;
 	var age = _v0.age;
@@ -5371,13 +5553,7 @@ var $author$project$View$character = function (_v0) {
 						$elm$html$Html$text(
 						$elm$core$String$fromInt(age) + ' years old.')
 					])),
-				A2(
-				$elm$html$Html$p,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(description)
-					])),
+				$author$project$View$descriptionParagraphs(description),
 				A2(
 				$elm$html$Html$p,
 				_List_Nil,
@@ -5457,13 +5633,7 @@ var $author$project$View$location = function (_v0) {
 					[
 						$elm$html$Html$text(name)
 					])),
-				A2(
-				$elm$html$Html$p,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(description)
-					])),
+				$author$project$View$descriptionParagraphs(description),
 				A2($author$project$View$charactersDetails, 'Characters', characters),
 				$author$project$View$adjoinings(adjoining)
 			]));
@@ -5487,13 +5657,7 @@ var $author$project$View$scenario = function (_v0) {
 					[
 						$elm$html$Html$text(name)
 					])),
-				A2(
-				$elm$html$Html$p,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(description)
-					])),
+				$author$project$View$descriptionParagraphs(description),
 				A2(
 				$elm$html$Html$details,
 				_List_Nil,
@@ -5524,7 +5688,6 @@ var $author$project$View$scenario = function (_v0) {
 					]))
 			]));
 };
-var $elm$html$Html$section = _VirtualDom_node('section');
 var $author$project$View$establishment = function (_v0) {
 	var name = _v0.name;
 	var description = _v0.description;
@@ -5544,13 +5707,7 @@ var $author$project$View$establishment = function (_v0) {
 					[
 						$elm$html$Html$text(name)
 					])),
-				A2(
-				$elm$html$Html$p,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(description)
-					])),
+				$author$project$View$descriptionParagraphs(description),
 				(!$elm$core$List$length(positions)) ? $elm$html$Html$text('') : A2(
 				$elm$html$Html$details,
 				_List_Nil,
@@ -5609,13 +5766,7 @@ var $author$project$View$town = function (_v0) {
 					[
 						$elm$html$Html$text(name)
 					])),
-				A2(
-				$elm$html$Html$p,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(description)
-					])),
+				$author$project$View$descriptionParagraphs(description),
 				A2(
 				$elm$html$Html$details,
 				_List_Nil,
@@ -5687,9 +5838,9 @@ var $author$project$Main$main = $elm$browser$Browser$sandbox(
 	{
 		init: {
 			scenarios: _List_fromArray(
-				[$author$project$Scenarios$DwarvenExcavation$dwarvenExcavation]),
+				[$author$project$Scenarios$DwarvenExcavation$dwarvenExcavation, $author$project$Scenarios$LavendarSpiders$lavendarSpiders, $author$project$Scenarios$GoblinMine$goblinMine]),
 			towns: _List_fromArray(
-				[$author$project$Fixtures$phandalin])
+				[$author$project$Towns$phandalin])
 		},
 		update: $author$project$Update$update,
 		view: $author$project$View$view

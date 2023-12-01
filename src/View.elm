@@ -1,6 +1,6 @@
 module View exposing (..)
 
-import Html exposing (Html, details, input, li, main_, p, section, summary, text, ul)
+import Html exposing (Html, br, details, input, li, main_, p, section, summary, text, ul)
 import Html.Attributes as Attr exposing (class, name, type_, value)
 import String exposing (fromInt)
 import Types exposing (Adjoining(..), Character, Establishment, Location, Model, Scenario, Town)
@@ -10,7 +10,7 @@ scenario : Scenario -> Html msg
 scenario { name, description, locations } =
     details [ class "scenario" ]
         [ summary [] [ text name ]
-        , p [] [ text description ]
+        , descriptionParagraphs description
         , details []
             [ summary [] [ text "Locations" ]
             , ul [] (List.map (\location_ -> li [] [ location location_ ]) locations)
@@ -22,7 +22,7 @@ location : Location -> Html msg
 location { name, description, characters, adjoining } =
     details [ class "location" ]
         [ summary [] [ text name ]
-        , p [] [ text description ]
+        , descriptionParagraphs description
         , charactersDetails "Characters" characters
         , adjoinings adjoining
         ]
@@ -43,7 +43,7 @@ town : Town -> Html msg
 town { name, description, lore, residents, establishments } =
     details [ class "town" ]
         [ summary [] [ text name ]
-        , p [] [ text description ]
+        , descriptionParagraphs description
         , details []
             [ summary [] [ text "Lore" ]
             , p [] [ text lore ]
@@ -77,7 +77,7 @@ establishment : Establishment -> Html msg
 establishment { name, description, positions } =
     details [ class "establishment" ]
         [ summary [] [ text name ]
-        , p [] [ text description ]
+        , descriptionParagraphs description
         , if List.length positions == 0 then
             text ""
 
@@ -94,7 +94,7 @@ character { name, age, description, hitPoints } =
     details [ class "character" ]
         [ summary [] [ text name ]
         , p [] [ fromInt age ++ " years old." |> text ]
-        , p [] [ text description ]
+        , descriptionParagraphs description
         , p [] [ "HP " |> text, hitPointsInput hitPoints ]
         ]
 
@@ -112,6 +112,16 @@ hitPointsInput max =
         , value maxString
         ]
         []
+
+
+descriptionParagraphs : String -> Html msg
+descriptionParagraphs descriptionText =
+    String.split "---" descriptionText
+        |> List.map
+            (\textSection ->
+                p [] [ text textSection ]
+            )
+        |> section [ class "description" ]
 
 
 view : Model -> Html msg

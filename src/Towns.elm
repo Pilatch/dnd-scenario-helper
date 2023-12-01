@@ -1,4 +1,4 @@
-module Fixtures exposing (..)
+module Towns exposing (..)
 
 import Characters exposing (..)
 import Establishments exposing (..)
@@ -9,14 +9,23 @@ phandalin : Town
 phandalin =
     { name = "Phandalin"
     , description = """
-    Features some new, log buildings surrounded by old stone ruins.
+    Nestled in the rocky foothills of the snow-capped Sword Mountain range is the town of Phandalin.
     Beyond are the forested foothills to the snow-capped Sword Mountain range.
-    Nestled in th erocky foothills of the snow-capped Sword Mountain range is the town of Phandalin.
+    Features some new, log buildings surrounded by old stone ruins.
     It's forty to fifvy simple log buildings.
     Crumbling stone ruins surround the newer houses and shops, showing how this must have been a much larger town long ago.
     The town has no walls nor garrison.
     At the center of town a two-story inn stands out.
     A couple doors down is the townmaster's hall with its job board posted outside.
+    ---
+    Job board has has notices of missing persons:
+    Erwin and Emma Northheath (young men/women, twins, last seen heading to school in Neverwinter)
+    Delilah the cow
+    Some random kid's marbles
+
+    ---
+    For lavendar thing:
+    Yarvin Rockgarden,
     """
     , lore = """
     This frontier town is build on the ruins of a much older settlement.
@@ -26,6 +35,22 @@ phandalin =
     The new settlement is home to farmers, woodcutters, smiths, fur traders, and prospectors drawn by stories of gold and platinum in the foothills of the Sword Mountains.
     Most adult residents keep weapons handy should the need arise.
     """
-    , residents = [ adabra, dazlyn, norbus, harbin, martha, john, delilah, linene, elmar, ander, thistle, tablen ]
+    , residents =
+        [ adabra
+        , ander
+        , dazlyn
+        , delilah
+        , eliza
+        , elmar
+        , harbin
+        , joanna
+        , john
+        , linene
+        , martha
+        , norbus
+        , tablen
+        , thistle
+        , yarvun
+        ]
     , establishments = [ lionsShieldCoster, barthensProvisions, stonehillInn, townsmastersHall, minersExchange, shrineOfLuck ]
     }

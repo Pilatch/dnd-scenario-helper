@@ -18,7 +18,15 @@ adabra =
     , description = """
     Adabra has long, kinky gray hair that she lets flow about, and never seems to mind if it's in front or her face, or gets in the way.
     She carries a big pouch slung around her shoulder that's fragrant with the herbs she collect as she stolls about.
+    ---
     Midwife and apothecary devote to Chauntea (goddess of agriculture).
+    ---
+    If asked, she complains that she hasn't been able to brew any healing potions recently, as Yarvun has gone missing, and he supplies her with the lavendar she needs.
+    If asked where one would find lavendar, she says it prefers to grow in sandy, rocky soil.
+    ---
+    Someone else in town will explain that if you follow the stream southeast, the soil gets rougher like that up a steep incline.
+    Along the stream at that point lavendar grows near the edge of a cliff.
+    If the characters follow the cliff downward, they find the grotto.
     """
     , age = 61
     , hitPoints = 4
@@ -119,6 +127,58 @@ dazlyn =
     """
     , age = 156
     , hitPoints = 4
+    }
+
+
+yarvun : Character
+yarvun =
+    { name = "Yarvun Rockgarden"
+    , description = """
+    A male human farmer who cultivates and harvests herbs.
+    Married to Eliza.  Father to Joanna.
+    Disappeared three days ago.
+    Has been providing Adabra Gynn with herbs for years.
+    Knows a secret location where lavendar grows in large quantity.
+    ---
+    Captured by giant spiders in the grotto.
+    Dead.
+    """
+    , age = 34
+    , hitPoints = 0
+    }
+
+
+eliza : Character
+eliza =
+    { name = "Eliza Rockgarden"
+    , description = """
+    A female human who teaches young childen in Phandalin how to read and write.
+    She has straight brown hair, freckles, and intense, dark eyes.
+    Married to Yarvun.  Mother to Joanna.
+    ---
+    Furious with Harbin Wester that he hasn't done more to find her missing husband.
+    Even more furious now that her daughter has gone off to find him that morning, because Eliza is not sure of secret location of the lavendar farm.
+    ---
+    If asked to join the search for her daughter, she says that her place is here in town, in case Joanna returns.
+    She will continue to ask for help.
+    """
+    , age = 30
+    , hitPoints = 4
+    }
+
+
+joanna : Character
+joanna =
+    { name = "Joanna Rockgarden"
+    , description = """
+    A female human child who is the daughter of Yarvun and Eliza.
+    Straight brown hair and lots of freckles on her face.
+    ---
+    Went to find her father at the secret grotto where lavendar grows.
+    Recently captured by giant spiders in the grotto. Still alive, but paralyzed.
+    """
+    , age = 8
+    , hitPoints = 1
     }
 
 
