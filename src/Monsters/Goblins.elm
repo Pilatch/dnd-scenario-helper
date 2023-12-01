@@ -16,7 +16,7 @@ deadGoblinKilledBySpiderInCrevice =
     A dead goblin killed by a spider in a crevice. It's wrapped tightly in webbing.
     ---
     If the characters cut the goblin free, they find a small pouch containing 3d6 cp, and a dagger.
-    Also in its pocket is a small chuck of dark rock with shiny metallic spots.
+    Also in its pocket is a small chunk of dark rock with shiny metallic spots.
     On a successful DC 10 Nature check, the character recognizes it as a piece of unrefined silver ore.
     """
     , age = 10
