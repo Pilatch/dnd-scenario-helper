@@ -3,6 +3,17 @@ module Characters exposing (..)
 import Types exposing (Character)
 
 
+bobby : Character
+bobby =
+    { name = "Bobby Brinwild"
+    , description = """
+    Has blonde hair that is so short and thin that he almost looks bald.
+    """
+    , age = 10
+    , hitPoints = 3
+    }
+
+
 elmar : Character
 elmar =
     { name = "Elmar Barthen"

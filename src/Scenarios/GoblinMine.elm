@@ -1,6 +1,6 @@
 module Scenarios.GoblinMine exposing (goblinMine)
 
-import Characters exposing (delilah)
+import Characters exposing (bobby, delilah)
 import Monsters.Goblins exposing (bearBelchTheBelcher, crankleTheCrotchety, digrikTheAngry, grabbeyTheDiaperWagger, krudrukTheThirsty, oculusTheRecordKeeper, redEyeTheLazy, stargTheLeaping, ultraGourmande, worg, wormFingersTheSlimy)
 import Types exposing (Adjoining(..), Location, Scenario)
 
@@ -200,9 +200,9 @@ greatRoom =
     , description = """
     This room is large, and has three braziers burning near the right wall.
     There are a three goblins sitting around the table, playing a game of dice.
-    Oculus is inspecting shackles, and flees when he notices the characters.
+    Oculus is inspecting shackles, and flees when he notices the players.
     ---
-    When the goblins at the table notice the characters, they will attack, overturning the table to provide themselves with cover,
+    When the goblins at the table notice the players, they will attack, overturning the table to provide themselves with cover,
     but the table, being circular, and the ground not being level, starts to roll.
     They awkwardly try to remain behind the table while shooting arrows, and bicker with each other about who can retain cover.
     """
@@ -235,9 +235,9 @@ dampChamber =
     Down a twisted, roughly hewn passage is a room with a pool of water, a steady drip from the ceiling, and wooden beams propping up the walls and ceiling.
     Inside is a huddled child, dressed in a burlap sac.
     He's trying to break his shackles with a rock.
-    His name is Bobby.
+    His name is Bobby Brinwild.
     """
-    , characters = []
+    , characters = [ bobby ]
     , adjoining = DeadEnd
     }
 
