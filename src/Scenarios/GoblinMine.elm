@@ -90,7 +90,7 @@ strangeTrophies =
     , description = """
     On either side of this room are two large logs, high up on the walls, or maybe one log that was sawed in half?
     It seems like they're mounted to opposite walls as if they were hunting trophies?
-    Stemming from this room are two corridors. One is dark and at the end of the other is a flame flickering in a sconce.
+    Stemming from this room are two corridors. One is dark and at the end of the other has a flame flickering in a sconce.
     ---
     DC 12 Perception check to detect the tripline.
     Tripping the trap results in 1d6 bludgeoning damage on failed DC 12 Dexterity saving throw, half on successful.
