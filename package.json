@@ -1,0 +1,23 @@
+{
+  "name": "dnd-scenario-helper",
+  "version": "0.0.0",
+  "description": "Display info about scenarios, towns, establishments in a hierarchal way to help me more quickly describe things to players, and track characters hitpoints",
+  "main": "main.js",
+  "scripts": {
+    "dev": "chokidar 'src/**/*.elm' -c ./build.sh",
+    "test": "elm-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pilatch/dnd-scenario-helper.git"
+  },
+  "author": "Ethan B. Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pilatch/dnd-scenario-helper/issues"
+  },
+  "homepage": "https://github.com/Pilatch/dnd-scenario-helper#readme",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  }
+}

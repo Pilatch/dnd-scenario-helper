@@ -1,7 +1,6 @@
 module Scenarios.GoblinMine exposing (goblinMine)
 
 import Characters exposing (delilah)
-import Html exposing (a)
 import Monsters.Goblins exposing (bearBelchTheBelcher, crankleTheCrotchety, digrikTheAngry, grabbeyTheDiaperWagger, krudrukTheThirsty, oculusTheRecordKeeper, redEyeTheLazy, stargTheLeaping, ultraGourmande, worg, wormFingersTheSlimy)
 import Types exposing (Adjoining(..), Location, Scenario)
 

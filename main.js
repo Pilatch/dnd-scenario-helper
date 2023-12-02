@@ -4509,7 +4509,7 @@ var $author$project$Scenarios$DwarvenExcavation$dwarvenExcavation = {
 var $author$project$Monsters$Goblins$crankleTheCrotchety = {age: 61, description: '\n    An old goblin with milky eyes that probably should have died a long time ago.\n    He leans on a cane and has a horrible bend to his back.\n    ---\n    He speaks fluent common, and doesn\'t want to speak goblin.\n    If the characters ignore him, he\'ll follow them around, complaining about everything they do.\n    Then if the characters let him get too close, he\'ll try to stab them in the back with a dagger, 1d4 - 1 piercing damage.\n    ', hitPoints: 2, name: 'Crankle The Crotchety'};
 var $author$project$Monsters$Goblins$grabbeyTheDiaperWagger = {age: 0, description: '\n    A tiny goblin with a dirty diaper, which he wags at the characters.\n    He gestures towards the marble sand-pit, inviting them to play.\n    If he loses at marbles, he throws his diaper at them.\n    ---\n    If the characters attack him, he runs away, leaving his diaper behind.\n    ', hitPoints: 1, name: 'Grabbey The Diaper Wagger'};
 var $author$project$Characters$delilah = {age: 5, description: '\n    Solid black, gentle dairy cow.\n    Poops a little bit when frightened.\n    Her milk production is starting to drop.\n    ', hitPoints: 9, name: 'Delilah the cow'};
-var $author$project$Monsters$Goblins$ultraGourmande = {age: 20, description: '\n    A goblin with a big belly, and a big appetite.\n    She\'s wearing a chef\'s hat.\n    ', hitPoints: 5, name: 'Ultra Gourmande'};
+var $author$project$Monsters$Goblins$ultraGourmande = {age: 20, description: '\n    A goblin with a big belly, and a big appetite.\n    She\'s wearing a chef\'s hat.\n    She does not speak, but is quite emotive.\n    ', hitPoints: 5, name: 'Ultra Gourmande'};
 var $author$project$Scenarios$GoblinMine$kitchen = {
 	adjoining: $author$project$Types$DeadEnd,
 	characters: _List_fromArray(
@@ -4635,7 +4635,7 @@ var $author$project$Scenarios$GoblinMine$goblinMine = {
 };
 var $author$project$Characters$eliza = {age: 30, description: '\n    A female human who teaches young childen in Phandalin how to read and write.\n    She has straight brown hair, freckles, and intense, dark eyes.\n    Married to Yarvun.  Mother to Joanna.\n    ---\n    Furious with Harbin Wester that he hasn\'t done more to find her missing husband.\n    Even more furious now that her daughter has gone off to find him that morning, because Eliza is not sure of secret location of the lavendar farm.\n    ---\n    If asked to join the search for her daughter, she says that her place is here in town, in case Joanna returns.\n    She will continue to ask for help.\n    ', hitPoints: 4, name: 'Eliza Rockgarden'};
 var $author$project$Monsters$GiantSpiders$creviceDwellingGiantSpider = {age: 8, description: '\n    A spider the size of a large person with dark furry legs and red splotches along its back.\n    ', hitPoints: 30, name: 'Crevice Dwelling Giant Spider'};
-var $author$project$Monsters$Goblins$deadGoblinKilledBySpiderInCrevice = {age: 10, description: '\n    A dead goblin killed by a spider in a crevice. It\'s wrapped tightly in webbing.\n    ---\n    If the characters cut the goblin free, they find a small pouch containing 3d6 cp, and a dagger.\n    Also in its pocket is a small chuck of dark rock with shiny metallic spots.\n    On a successful DC 10 Nature check, the character recognizes it as a piece of unrefined silver ore.\n    ', hitPoints: 0, name: 'Dead Goblin Killed By Spider In Crevice'};
+var $author$project$Monsters$Goblins$deadGoblinKilledBySpiderInCrevice = {age: 10, description: '\n    A dead goblin killed by a spider in a crevice. It\'s wrapped tightly in webbing.\n    ---\n    If the characters cut the goblin free, they find a small pouch containing 3d6 cp, and a dagger.\n    Also in its pocket is a small chunk of dark rock with shiny metallic spots.\n    On a successful DC 10 Nature check, the character recognizes it as a piece of unrefined silver ore.\n    ', hitPoints: 0, name: 'Dead Goblin Killed By Spider In Crevice'};
 var $author$project$Characters$joanna = {age: 8, description: '\n    A female human child who is the daughter of Yarvun and Eliza.\n    Straight brown hair and lots of freckles on her face.\n    ---\n    Went to find her father at the secret grotto where lavendar grows.\n    Recently captured by giant spiders in the grotto. Still alive, but paralyzed.\n    ', hitPoints: 1, name: 'Joanna Rockgarden'};
 var $author$project$Characters$yarvun = {age: 34, description: '\n    A male human farmer who cultivates and harvests herbs.\n    Married to Eliza.  Father to Joanna.\n    Disappeared three days ago.\n    Has been providing Adabra Gynn with herbs for years.\n    Knows a secret location where lavendar grows in large quantity.\n    ---\n    Captured by giant spiders in the grotto.\n    Dead.\n    ', hitPoints: 0, name: 'Yarvun Rockgarden'};
 var $author$project$Scenarios$LavendarSpiders$grotto = {
@@ -4724,7 +4724,7 @@ var $author$project$Establishments$townsmastersHall = {
 		])
 };
 var $author$project$Towns$phandalin = {
-	description: '\n    Nestled in the rocky foothills of the snow-capped Sword Mountain range is the town of Phandalin.\n    Beyond are the forested foothills to the snow-capped Sword Mountain range.\n    Features some new, log buildings surrounded by old stone ruins.\n    It\'s forty to fifvy simple log buildings.\n    Crumbling stone ruins surround the newer houses and shops, showing how this must have been a much larger town long ago.\n    The town has no walls nor garrison.\n    At the center of town a two-story inn stands out.\n    A couple doors down is the townmaster\'s hall with its job board posted outside.\n    ---\n    Job board has has notices of missing persons:\n    Erwin and Emma Northheath (young men/women, twins, last seen heading to school in Neverwinter)\n    Delilah the cow\n    Some random kid\'s marbles\n\n    ---\n    For lavendar thing:\n    Yarvin Rockgarden,\n    ',
+	description: '\n    Nestled in the rocky foothills of the snow-capped Sword Mountain range is the frontier town of Phandalin.\n    It\'s forty to fifty simple, newly-constructed log buildings.\n    Crumbling stone ruins surround the newer houses and shops, showing how this must have been a much larger town long ago.\n    The town has no walls nor garrison.\n    Beyond are forested foothills.\n    At the center of town a two-story inn stands out.\n    A couple doors down is the townmaster\'s hall with its job board posted outside.\n    ---\n    Job board has has notices of missing persons:\n    Erwin and Emma Northheath (young men/women, twins, last seen heading to school in Neverwinter)\n    Delilah the cow\n    Some random kid\'s marbles\n\n    ---\n    For lavendar thing:\n    Yarvin Rockgarden,\n    ',
 	establishments: _List_fromArray(
 		[$author$project$Establishments$lionsShieldCoster, $author$project$Establishments$barthensProvisions, $author$project$Establishments$stonehillInn, $author$project$Establishments$townsmastersHall, $author$project$Establishments$minersExchange, $author$project$Establishments$shrineOfLuck]),
 	lore: '\n    This frontier town is build on the ruins of a much older settlement.\n    Hundreds of years ago, the old Phandalin was a thriving human town whose people were firmly aligned with neighboring dwarves and gnomes.\n    Then an orc horde swept through the area and laid waste to the settlement, and Phandalin was abandoned for centuries.\n    In the last 3-4 years, settlers from the cities of Neverwinter and Waterdeep have begun the hard work of reclaiming the ruins of phandalin.\n    The new settlement is home to farmers, woodcutters, smiths, fur traders, and prospectors drawn by stories of gold and platinum in the foothills of the Sword Mountains.\n    Most adult residents keep weapons handy should the need arise.\n    ',
@@ -5501,7 +5501,6 @@ var $author$project$View$descriptionParagraphs = function (descriptionText) {
 			A2($elm$core$String$split, '---', descriptionText)));
 };
 var $elm$html$Html$details = _VirtualDom_node('details');
-var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $elm$html$Html$Attributes$max = $elm$html$Html$Attributes$stringProperty('max');
 var $elm$html$Html$Attributes$min = $elm$html$Html$Attributes$stringProperty('min');
@@ -5564,6 +5563,7 @@ var $author$project$View$character = function (_v0) {
 					]))
 			]));
 };
+var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$ul = _VirtualDom_node('ul');
 var $author$project$View$charactersDetails = F2(
 	function (label, list) {
@@ -5638,6 +5638,32 @@ var $author$project$View$location = function (_v0) {
 				$author$project$View$adjoinings(adjoining)
 			]));
 };
+var $elm$core$List$sortBy = _List_sortBy;
+var $author$project$View$locationsCharacters = function (locations) {
+	return A2(
+		$elm$core$List$sortBy,
+		function ($) {
+			return $.name;
+		},
+		A3(
+			$elm$core$List$foldl,
+			F2(
+				function (oneLocation, allCharacters) {
+					var _v0 = oneLocation.adjoining;
+					if (_v0.$ === 'DeadEnd') {
+						return _Utils_ap(allCharacters, oneLocation.characters);
+					} else {
+						var moreLocations = _v0.a;
+						return _Utils_ap(
+							allCharacters,
+							_Utils_ap(
+								oneLocation.characters,
+								$author$project$View$locationsCharacters(moreLocations)));
+					}
+				}),
+			_List_Nil,
+			locations));
+};
 var $author$project$View$scenario = function (_v0) {
 	var name = _v0.name;
 	var description = _v0.description;
@@ -5658,6 +5684,10 @@ var $author$project$View$scenario = function (_v0) {
 						$elm$html$Html$text(name)
 					])),
 				$author$project$View$descriptionParagraphs(description),
+				A2(
+				$author$project$View$charactersDetails,
+				'Characters',
+				$author$project$View$locationsCharacters(locations)),
 				A2(
 				$elm$html$Html$details,
 				_List_Nil,

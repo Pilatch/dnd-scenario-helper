@@ -11,11 +11,30 @@ scenario { name, description, locations } =
     details [ class "scenario" ]
         [ summary [] [ text name ]
         , descriptionParagraphs description
+        , charactersDetails "Characters" (locationsCharacters locations)
         , details []
             [ summary [] [ text "Locations" ]
             , ul [] (List.map (\location_ -> li [] [ location location_ ]) locations)
             ]
         ]
+
+
+locationsCharacters : List Location -> List Character
+locationsCharacters locations =
+    List.foldl
+        (\oneLocation allCharacters ->
+            case oneLocation.adjoining of
+                DeadEnd ->
+                    allCharacters ++ oneLocation.characters
+
+                Adjoining moreLocations ->
+                    allCharacters
+                        ++ oneLocation.characters
+                        ++ locationsCharacters moreLocations
+        )
+        []
+        locations
+        |> List.sortBy .name
 
 
 location : Location -> Html msg
@@ -49,11 +68,6 @@ town { name, description, lore, residents, establishments } =
             , p [] [ text lore ]
             ]
         , charactersDetails "Residents" residents
-
-        -- , details []
-        --     [ summary [] [ text "Residents" ]
-        --     , ul [] (List.map (\character_ -> li [] [ character character_ ]) residents)
-        --     ]
         , details []
             [ summary [] [ text "Establishments" ]
             , ul [] (List.map (\establishment_ -> li [] [ establishment establishment_ ]) establishments)

@@ -9,12 +9,11 @@ phandalin : Town
 phandalin =
     { name = "Phandalin"
     , description = """
-    Nestled in the rocky foothills of the snow-capped Sword Mountain range is the town of Phandalin.
-    Beyond are the forested foothills to the snow-capped Sword Mountain range.
-    Features some new, log buildings surrounded by old stone ruins.
-    It's forty to fifvy simple log buildings.
+    Nestled in the rocky foothills of the snow-capped Sword Mountain range is the frontier town of Phandalin.
+    It's forty to fifty simple, newly-constructed log buildings.
     Crumbling stone ruins surround the newer houses and shops, showing how this must have been a much larger town long ago.
     The town has no walls nor garrison.
+    Beyond are forested foothills.
     At the center of town a two-story inn stands out.
     A couple doors down is the townmaster's hall with its job board posted outside.
     ---

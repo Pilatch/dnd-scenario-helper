@@ -177,6 +177,7 @@ ultraGourmande =
     , description = """
     A goblin with a big belly, and a big appetite.
     She's wearing a chef's hat.
+    She does not speak, but is quite emotive.
     """
     , age = 20
     , hitPoints = 5
