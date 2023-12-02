@@ -235,7 +235,6 @@ dampChamber =
     Down a twisted, roughly hewn passage is a room with a pool of water, a steady drip from the ceiling, and wooden beams propping up the walls and ceiling.
     Inside is a huddled child, dressed in a burlap sac.
     He's trying to break his shackles with a rock.
-    His name is Bobby Brinwild.
     """
     , characters = [ bobby ]
     , adjoining = DeadEnd
