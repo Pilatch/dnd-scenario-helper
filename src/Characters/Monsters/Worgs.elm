@@ -1,6 +1,6 @@
 module Characters.Monsters.Worgs exposing (..)
 
-import Types exposing (Character)
+import Types exposing (Character, Race(..))
 
 
 boneGnawer : Character
@@ -16,4 +16,6 @@ boneGnawer =
     """
     , age = 4
     , hitPoints = 29
+    , maxHitPoints = 29
+    , race = Worg
     }

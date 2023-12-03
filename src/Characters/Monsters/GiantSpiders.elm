@@ -1,6 +1,6 @@
 module Characters.Monsters.GiantSpiders exposing (..)
 
-import Types exposing (Character)
+import Types exposing (Character, Race(..))
 
 
 creviceDwellingGiantSpider : Character
@@ -11,4 +11,6 @@ creviceDwellingGiantSpider =
     """
     , age = 8
     , hitPoints = 30
+    , maxHitPoints = 30
+    , race = Spider
     }

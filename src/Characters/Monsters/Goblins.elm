@@ -1,6 +1,6 @@
 module Characters.Monsters.Goblins exposing (..)
 
-import Types exposing (Character)
+import Types exposing (Character, Race(..))
 
 
 
@@ -21,6 +21,8 @@ deadGoblinKilledBySpiderInCrevice =
     """
     , age = 10
     , hitPoints = 0
+    , maxHitPoints = 0
+    , race = Goblin
     }
 
 
@@ -32,6 +34,8 @@ stargTheLeaping =
     """
     , age = 12
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Goblin
     }
 
 
@@ -41,6 +45,8 @@ digrikTheAngry =
     , description = """An angry goblin."""
     , age = 20
     , hitPoints = 5
+    , maxHitPoints = 5
+    , race = Goblin
     }
 
 
@@ -50,6 +56,8 @@ stinkflankTheStinky =
     , description = """A stinky goblin."""
     , age = 22
     , hitPoints = 9
+    , maxHitPoints = 9
+    , race = Goblin
     }
 
 
@@ -59,6 +67,8 @@ grubGrubTheUnwholesome =
     , description = """A goblin with a bad attitude."""
     , age = 9
     , hitPoints = 8
+    , maxHitPoints = 8
+    , race = Goblin
     }
 
 
@@ -68,6 +78,8 @@ bearBelchTheBelcher =
     , description = """A goblin with a penchant for belching."""
     , age = 10
     , hitPoints = 7
+    , maxHitPoints = 7
+    , race = Goblin
     }
 
 
@@ -77,6 +89,8 @@ redEyeTheLazy =
     , description = """A goblin who is lazy. Even lazier than most."""
     , age = 30
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Goblin
     }
 
 
@@ -86,6 +100,8 @@ wormFingersTheSlimy =
     , description = """A goblin who is always picking his nose."""
     , age = 8
     , hitPoints = 10
+    , maxHitPoints = 10
+    , race = Goblin
     }
 
 
@@ -95,6 +111,8 @@ krudrukTheThirsty =
     , description = """A goblin who is always thirsty."""
     , age = 25
     , hitPoints = 3
+    , maxHitPoints = 3
+    , race = Goblin
     }
 
 
@@ -107,6 +125,8 @@ oculusTheRecordKeeper =
     """
     , age = 33
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Goblin
     }
 
 
@@ -122,6 +142,8 @@ grabbeyTheDiaperWagger =
     """
     , age = 0
     , hitPoints = 1
+    , maxHitPoints = 1
+    , race = Goblin
     }
 
 
@@ -138,6 +160,8 @@ crankleTheCrotchety =
     """
     , age = 61
     , hitPoints = 2
+    , maxHitPoints = 2
+    , race = Goblin
     }
 
 
@@ -152,6 +176,8 @@ nilgobTheTaskmaster =
     """
     , age = 40
     , hitPoints = 18
+    , maxHitPoints = 18
+    , race = Goblin
     }
 
 
@@ -165,4 +191,6 @@ ultraGourmande =
     """
     , age = 20
     , hitPoints = 5
+    , maxHitPoints = 5
+    , race = Goblin
     }

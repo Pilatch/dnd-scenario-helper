@@ -131,28 +131,33 @@ establishment rolodex { name, description, positions } =
 
 
 character : CharacterKey -> Character -> Html Msg
-character characterKey { name, age, description, hitPoints } =
+character characterKey characterRecord =
+    let
+        { name, age, description, hitPoints, maxHitPoints } =
+            characterRecord
+    in
     details [ class "character" ]
         [ summary [] [ text name ]
         , p [] [ fromInt age ++ " years old." |> text ]
         , descriptionParagraphs description
-        , p [] [ "HP " |> text, hitPointsInput characterKey hitPoints ]
+        , p [] [ "HP " |> text, hitPointsInput characterKey characterRecord ]
         ]
 
 
-hitPointsInput : CharacterKey -> Int -> Html Msg
-hitPointsInput characterKey max =
+hitPointsInput : CharacterKey -> { a | hitPoints : Int, maxHitPoints : Int } -> Html Msg
+hitPointsInput characterKey { hitPoints, maxHitPoints } =
     let
         maxString =
-            fromInt max
+            fromInt maxHitPoints
+
+        currentString =
+            fromInt hitPoints
     in
     input
         [ type_ "number"
-        , Attr.min (max * -1 |> fromInt)
-
-        -- TODO make max work by adding a max hitpoints to character records
-        -- , Attr.max maxString
-        , value maxString
+        , Attr.min (maxHitPoints * -1 |> fromInt)
+        , Attr.max maxString
+        , value currentString
         , onInput (HitPointsChanged characterKey)
         ]
         []

@@ -1,6 +1,6 @@
 module Characters.TownFolk exposing (..)
 
-import Types exposing (Character)
+import Types exposing (Character, Race(..))
 
 
 bobby : Character
@@ -11,6 +11,8 @@ bobby =
     """
     , age = 10
     , hitPoints = 3
+    , maxHitPoints = 3
+    , race = Human
     }
 
 
@@ -20,6 +22,8 @@ elmar =
     , description = "Lean balding man who likes to whistle."
     , age = 50
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -41,6 +45,8 @@ adabra =
     """
     , age = 61
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -54,6 +60,8 @@ ander =
     """
     , age = 17
     , hitPoints = 3
+    , maxHitPoints = 3
+    , race = Human
     }
 
 
@@ -68,6 +76,8 @@ thistle =
     """
     , age = 15
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -85,6 +95,8 @@ tablen =
     """
     , age = 39
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -97,6 +109,8 @@ linene =
     Won't sell to anyone she thinks is a threat to the town.
     """
     , hitPoints = 5
+    , maxHitPoints = 5
+    , race = Human
     }
 
 
@@ -113,6 +127,8 @@ halia =
     """
     , age = 44
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -126,6 +142,8 @@ delilah =
     Her milk production is starting to drop.
     """
     , hitPoints = 9
+    , maxHitPoints = 9
+    , race = Cow
     }
 
 
@@ -138,6 +156,8 @@ dazlyn =
     """
     , age = 156
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Dwarf
     }
 
 
@@ -156,6 +176,8 @@ yarvun =
     """
     , age = 34
     , hitPoints = 0
+    , maxHitPoints = 0
+    , race = Human
     }
 
 
@@ -175,6 +197,8 @@ eliza =
     """
     , age = 30
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -190,6 +214,8 @@ joanna =
     """
     , age = 8
     , hitPoints = 1
+    , maxHitPoints = 1
+    , race = Human
     }
 
 
@@ -204,6 +230,8 @@ harbin =
     Slides coins under the door as payment for completed quests.
     """
     , hitPoints = 3
+    , maxHitPoints = 3
+    , race = Human
     }
 
 
@@ -216,6 +244,8 @@ martha =
     Married to John Boven.
     """
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -225,6 +255,8 @@ john =
     , age = 51
     , description = "Friendly but quiet human who farms. Married to Martha Boven."
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Human
     }
 
 
@@ -236,4 +268,6 @@ norbus =
     """
     , age = 153
     , hitPoints = 4
+    , maxHitPoints = 4
+    , race = Dwarf
     }

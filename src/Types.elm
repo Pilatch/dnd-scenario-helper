@@ -67,6 +67,8 @@ type alias Character =
     , age : Int
     , description : String
     , hitPoints : Int
+    , maxHitPoints : Int
+    , race : Race
     }
 
 
@@ -81,7 +83,8 @@ type Race
     | Cow
     | Orc
     | Goblin
-    | GiantSpider
+    | Spider
+    | Worg
 
 
 type CharacterKey

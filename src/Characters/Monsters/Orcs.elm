@@ -1,6 +1,6 @@
 module Characters.Monsters.Orcs exposing (..)
 
-import Types exposing (Character)
+import Types exposing (Character, Race(..))
 
 
 zoll : Character
@@ -11,6 +11,8 @@ zoll =
     """
     , age = 11
     , hitPoints = 13
+    , maxHitPoints = 13
+    , race = Orc
     }
 
 
@@ -22,6 +24,8 @@ ghog =
     """
     , age = 20
     , hitPoints = 21
+    , maxHitPoints = 21
+    , race = Orc
     }
 
 
@@ -35,4 +39,6 @@ dhoman =
     """
     , age = 31
     , hitPoints = 19
+    , maxHitPoints = 19
+    , race = Orc
     }

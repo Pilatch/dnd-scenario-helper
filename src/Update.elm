@@ -7,10 +7,6 @@ import Types exposing (Model, Msg(..))
 
 update : Msg -> Model -> Model
 update msg model =
-    let
-        x =
-            Debug.log "hit point change" msg
-    in
     case msg of
         HitPointsChanged characterKey hitPointsString ->
             case toInt hitPointsString of
