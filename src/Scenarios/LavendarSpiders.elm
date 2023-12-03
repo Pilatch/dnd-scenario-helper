@@ -1,9 +1,9 @@
 module Scenarios.LavendarSpiders exposing (..)
 
-import Characters exposing (eliza, joanna, yarvun)
-import Monsters.GiantSpiders exposing (creviceDwellingGiantSpider)
-import Monsters.Goblins exposing (deadGoblinKilledBySpiderInCrevice)
-import Types exposing (Adjoining(..), Location, Scenario)
+import Characters.Monsters.GiantSpiders exposing (creviceDwellingGiantSpider)
+import Characters.Monsters.Goblins exposing (deadGoblinKilledBySpiderInCrevice)
+import Characters.TownFolk exposing (eliza, joanna, yarvun)
+import Types exposing (Adjoining(..), CharacterKey(..), Location, Scenario)
 
 
 lavendarSpiders : Scenario
@@ -30,7 +30,7 @@ batteringHarbinsDoor =
     If she had to guess, it's that Joanna went looking for her father.
     Yarvun always headed out southeast when he went to pick Lavendar.
     """
-    , characters = [ eliza ]
+    , characters = [ Eliza ]
     , adjoining = Adjoining [ newShoes ]
     }
 
@@ -67,10 +67,10 @@ grotto =
     The crevice is where the spider is hiding, along with its victims, which are bundled up in webbing.
     """
     , characters =
-        [ creviceDwellingGiantSpider
-        , joanna
-        , yarvun
-        , deadGoblinKilledBySpiderInCrevice
+        [ CreviceDwellingGiantSpider
+        , Joanna
+        , Yarvun
+        , DeadGoblinKilledBySpiderInCrevice
         ]
     , adjoining = DeadEnd
     }

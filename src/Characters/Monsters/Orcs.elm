@@ -1,4 +1,4 @@
-module Monsters.Orcs exposing (..)
+module Characters.Monsters.Orcs exposing (..)
 
 import Types exposing (Character)
 

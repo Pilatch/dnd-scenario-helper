@@ -1,8 +1,9 @@
 module Scenarios.GoblinMine exposing (goblinMine)
 
-import Characters exposing (bobby, delilah)
-import Monsters.Goblins exposing (bearBelchTheBelcher, crankleTheCrotchety, digrikTheAngry, grabbeyTheDiaperWagger, krudrukTheThirsty, oculusTheRecordKeeper, redEyeTheLazy, stargTheLeaping, ultraGourmande, worg, wormFingersTheSlimy)
-import Types exposing (Adjoining(..), Location, Scenario)
+import Characters.Monsters.Goblins exposing (bearBelchTheBelcher, crankleTheCrotchety, digrikTheAngry, grabbeyTheDiaperWagger, krudrukTheThirsty, oculusTheRecordKeeper, redEyeTheLazy, stargTheLeaping, ultraGourmande, wormFingersTheSlimy)
+import Characters.Monsters.Worgs exposing (boneGnawer)
+import Characters.TownFolk exposing (bobby, delilah)
+import Types exposing (Adjoining(..), CharacterKey(..), Location, Scenario)
 
 
 goblinMine : Scenario
@@ -42,7 +43,7 @@ goblinWatchTower =
     The tower looks shoddy, and hastily built.
     Behind the watch tower is a long rope that has been staked into the ground, and is taut.
     """
-    , characters = [ stargTheLeaping, digrikTheAngry ]
+    , characters = [ StargTheLeaping, DigrikTheAngry ]
     , adjoining = Adjoining [ abandonedMineEntrance ]
     }
 
@@ -127,7 +128,7 @@ hallwayOfFailedProspects =
     ---
     Worm Fingers is in the 1st room, and will attack if the players get too close.
     """
-    , characters = [ wormFingersTheSlimy ]
+    , characters = [ WormFingersTheSlimy ]
     , adjoining = Adjoining [ greatRoom ]
     }
 
@@ -149,7 +150,7 @@ dormitory =
     The key is under the rug.
     The other chests are filled with clothes, and personal effects.
     """
-    , characters = [ crankleTheCrotchety, grabbeyTheDiaperWagger ]
+    , characters = [ CrankleTheCrotchety, GrabbeyTheDiaperWagger ]
     , adjoining = Adjoining [ privy, kitchen ]
     }
 
@@ -166,7 +167,7 @@ privy =
     Oculus is there, reading his book with his pants down.
     He immediately escapes by squeezing through a tiny tunnel.
     """
-    , characters = [ oculusTheRecordKeeper ]
+    , characters = [ OculusTheRecordKeeper ]
     , adjoining = DeadEnd
     }
 
@@ -189,7 +190,7 @@ kitchen =
     ---
     One especially fat goblin is sharpening a knife and looking at the cow.
     """
-    , characters = [ ultraGourmande, delilah ]
+    , characters = [ UltraGourmande, Delilah ]
     , adjoining = DeadEnd
     }
 
@@ -206,7 +207,7 @@ greatRoom =
     but the table, being circular, and the ground not being level, starts to roll.
     They awkwardly try to remain behind the table while shooting arrows, and bicker with each other about who can retain cover.
     """
-    , characters = [ oculusTheRecordKeeper, krudrukTheThirsty, redEyeTheLazy, bearBelchTheBelcher ]
+    , characters = [ OculusTheRecordKeeper, KrudrukTheThirsty, RedEyeTheLazy, BearBelchTheBelcher ]
     , adjoining = Adjoining [ dustyStoreRoom, dampChamber, collapsedProspect, longTunnel, giantMiningChamber ]
     }
 
@@ -236,7 +237,7 @@ dampChamber =
     Inside is a huddled child, dressed in a burlap sac.
     He's trying to break his shackles with a rock.
     """
-    , characters = [ bobby ]
+    , characters = [ Bobby ]
     , adjoining = DeadEnd
     }
 
@@ -273,6 +274,6 @@ giantMiningChamber =
     There are a few goblins in here, digging.
     Also digging is Telly Scornlove and Erwin and Emma, dressed in burlap sacks.
     """
-    , characters = [ worg ]
+    , characters = [ BoneGnawer ]
     , adjoining = DeadEnd
     }

@@ -1,4 +1,4 @@
-module Characters exposing (..)
+module Characters.TownFolk exposing (..)
 
 import Types exposing (Character)
 

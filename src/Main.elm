@@ -1,6 +1,7 @@
 module Main exposing (main)
 
 import Browser exposing (sandbox)
+import Characters.All
 import Scenarios.DwarvenExcavation
 import Scenarios.GoblinMine
 import Scenarios.LavendarSpiders
@@ -13,6 +14,7 @@ main =
     sandbox
         { init =
             { towns = [ Towns.phandalin ]
+            , rolodex = Characters.All.all
             , scenarios =
                 [ Scenarios.DwarvenExcavation.dwarvenExcavation
                 , Scenarios.LavendarSpiders.lavendarSpiders

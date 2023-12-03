@@ -1,8 +1,8 @@
 module Towns exposing (..)
 
-import Characters exposing (..)
+import Characters.TownFolk exposing (..)
 import Establishments exposing (..)
-import Types exposing (Town)
+import Types exposing (CharacterKey(..), Town)
 
 
 phandalin : Town
@@ -35,21 +35,21 @@ phandalin =
     Most adult residents keep weapons handy should the need arise.
     """
     , residents =
-        [ adabra
-        , ander
-        , dazlyn
-        , delilah
-        , eliza
-        , elmar
-        , harbin
-        , joanna
-        , john
-        , linene
-        , martha
-        , norbus
-        , tablen
-        , thistle
-        , yarvun
+        [ Adabra
+        , Ander
+        , Dazlyn
+        , Delilah
+        , Eliza
+        , Elmar
+        , Harbin
+        , Joanna
+        , John
+        , Linene
+        , Martha
+        , Norbus
+        , Tablen
+        , Thistle
+        , Yarvun
         ]
     , establishments = [ lionsShieldCoster, barthensProvisions, stonehillInn, townsmastersHall, minersExchange, shrineOfLuck ]
     }

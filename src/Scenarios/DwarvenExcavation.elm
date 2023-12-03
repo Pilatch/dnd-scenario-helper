@@ -1,7 +1,7 @@
 module Scenarios.DwarvenExcavation exposing (..)
 
-import Characters exposing (dazlyn, norbus)
-import Monsters.Orcs exposing (dhoman, ghog, zoll)
+import Characters.Monsters.Orcs exposing (dhoman, ghog, zoll)
+import Characters.TownFolk exposing (dazlyn, norbus)
 import Types exposing (..)
 
 
@@ -23,7 +23,7 @@ canyonEntrance =
     A wide black gate stands open, that normally would have closed off the canyon from the hilly country outside.
     When the players exit the canyon, they encounter three orcs.
     """
-    , characters = [ zoll, ghog, dhoman ]
+    , characters = [ Zoll, Ghog, Dhoman ]
     , adjoining = Adjoining [ ruinedDwarvenSettlement ]
     }
 
@@ -49,7 +49,7 @@ templeEdifice =
     Inside is blackness.
     Outside the temple, just beyond the steps leading up to it are two dwarves, eyeing the entrance nervously while eating rations.
     """
-    , characters = [ dazlyn, norbus ]
+    , characters = [ Dazlyn, Norbus ]
     , adjoining = Adjoining [ entranceHallway ]
     }
 

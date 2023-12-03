@@ -1,7 +1,7 @@
 module Establishments exposing (..)
 
-import Characters exposing (..)
-import Types exposing (Establishment)
+import Characters.TownFolk exposing (..)
+import Types exposing (CharacterKey(..), Establishment)
 
 
 lionsShieldCoster : Establishment
@@ -12,7 +12,7 @@ lionsShieldCoster =
     Trading post owned by Lionshields, a merchant company based in Yartar, (100mi E).
     The company ships finished goods to establishments like this one scattered about the region.
     """
-    , positions = [ { character = linene, position = "Master of the trading post" } ]
+    , positions = [ { characterKey = Linene, position = "Master of the trading post" } ]
     }
 
 
@@ -28,9 +28,9 @@ barthensProvisions =
     They keep the shelves stocked, load and unload wagons, and wait on customers when Elmar isn't around.
     """
     , positions =
-        [ { character = elmar, position = "Proprieter" }
-        , { character = ander, position = "Clerk" }
-        , { character = thistle, position = "Clerk" }
+        [ { characterKey = Elmar, position = "Proprieter" }
+        , { characterKey = Ander, position = "Clerk" }
+        , { characterKey = Thistle, position = "Clerk" }
         ]
     }
 
@@ -46,9 +46,9 @@ stonehillInn =
     1sp/meal.
     """
     , positions =
-        [ { character = tablen, position = "Founder" }
-        , { character = dazlyn, position = "Customer" }
-        , { character = norbus, position = "Customer" }
+        [ { characterKey = Tablen, position = "Founder" }
+        , { characterKey = Dazlyn, position = "Customer" }
+        , { characterKey = Norbus, position = "Customer" }
         ]
     }
 
@@ -61,7 +61,7 @@ townsmastersHall =
         New building with a job board out front and a door that's always locked.
         Inside, has rows of pews for community services, and an office.
         """
-    , positions = [ { character = harbin, position = "Townsmaster" } ]
+    , positions = [ { characterKey = Harbin, position = "Townsmaster" } ]
     }
 
 
@@ -73,7 +73,7 @@ minersExchange =
         The exchange also serves as an unofficial records office, registering claimns to various streams and excavations around the area.
         A number of independent prospectors use the exchange regularly.
         """
-    , positions = [ { character = halia, position = "Guildmaster" } ]
+    , positions = [ { characterKey = Halia, position = "Guildmaster" } ]
     }
 
 

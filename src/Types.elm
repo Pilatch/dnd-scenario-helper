@@ -1,14 +1,21 @@
 module Types exposing (..)
 
+import GenericDict
+
+
+type alias Rolodex =
+    GenericDict.Dict CharacterKey Character
+
 
 type alias Model =
     { towns : List Town
+    , rolodex : Rolodex
     , scenarios : List Scenario
     }
 
 
 type Msg
-    = NoOp
+    = HitPointsChanged CharacterKey String
 
 
 type Region
@@ -19,7 +26,7 @@ type alias Town =
     { name : String
     , description : String
     , lore : String
-    , residents : List Character
+    , residents : List CharacterKey
     , establishments : List Establishment
     }
 
@@ -34,7 +41,7 @@ type alias Scenario =
 type alias Location =
     { name : String
     , description : String
-    , characters : List Character
+    , characters : List CharacterKey
     , adjoining : Adjoining
     }
 
@@ -51,7 +58,7 @@ type Feature
 type alias Establishment =
     { name : String
     , description : String
-    , positions : List { character : Character, position : String }
+    , positions : List { characterKey : CharacterKey, position : String }
     }
 
 
@@ -75,3 +82,42 @@ type Race
     | Orc
     | Goblin
     | GiantSpider
+
+
+type CharacterKey
+    = Bobby
+    | Elmar
+    | Adabra
+    | Ander
+    | Thistle
+    | Tablen
+    | Linene
+    | Halia
+    | Delilah
+    | Dazlyn
+    | Yarvun
+    | Eliza
+    | Joanna
+    | Harbin
+    | Martha
+    | John
+    | Norbus
+    | CreviceDwellingGiantSpider
+    | DeadGoblinKilledBySpiderInCrevice
+    | StargTheLeaping
+    | DigrikTheAngry
+    | StinkflankTheStinky
+    | GrubGrubTheUnwholesome
+    | BearBelchTheBelcher
+    | RedEyeTheLazy
+    | WormFingersTheSlimy
+    | KrudrukTheThirsty
+    | OculusTheRecordKeeper
+    | GrabbeyTheDiaperWagger
+    | CrankleTheCrotchety
+    | NilgobTheTaskmaster
+    | BoneGnawer
+    | UltraGourmande
+    | Zoll
+    | Ghog
+    | Dhoman

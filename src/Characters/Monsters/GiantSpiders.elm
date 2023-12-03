@@ -1,4 +1,4 @@
-module Monsters.GiantSpiders exposing (..)
+module Characters.Monsters.GiantSpiders exposing (..)
 
 import Types exposing (Character)
 
