@@ -1,11 +1,12 @@
 module View exposing (..)
 
 import Characters.Rolodex as Rolodex exposing (get, toString)
-import Html exposing (Html, details, input, li, main_, p, section, summary, text, ul)
+import Html exposing (Html, a, details, img, input, li, main_, p, section, summary, text, ul)
 import Html.Attributes as Attr exposing (class, name, type_, value)
 import Html.Events exposing (onInput)
+import List.Unique exposing (filterDuplicates)
 import String exposing (fromInt)
-import Types exposing (Adjoining(..), Character, CharacterKey, Establishment, Location, Model, Msg(..), Rolodex, Scenario, Town)
+import Types exposing (Adjoining(..), Character, CharacterKey, Establishment, Image, Location, Model, Msg(..), Rolodex, Scenario, Town)
 
 
 scenario : Rolodex -> Scenario -> Html Msg
@@ -14,7 +15,7 @@ scenario rolodex { name, description, locations } =
         [ summary [] [ text name ]
         , descriptionParagraphs description
         , charactersDetails rolodex "Characters" (locationsCharacters locations)
-        , details []
+        , details [ class "locations" ]
             [ summary [] [ text "Locations" ]
             , ul [] (List.map (\location_ -> li [] [ location rolodex location_ ]) locations)
             ]
@@ -65,12 +66,12 @@ town rolodex { name, description, lore, residents, establishments } =
     details [ class "town" ]
         [ summary [] [ text name ]
         , descriptionParagraphs description
-        , details []
+        , details [ class "lore" ]
             [ summary [] [ text "Lore" ]
             , p [] [ text lore ]
             ]
         , charactersDetails rolodex "Residents" residents
-        , details []
+        , details [ class "establishments" ]
             [ summary [] [ text "Establishments" ]
             , ul [] (List.map (\establishment_ -> li [] [ establishment rolodex establishment_ ]) establishments)
             ]
@@ -83,6 +84,10 @@ charactersDetails rolodex label list =
         text ""
 
     else
+        let
+            dedupedList =
+                filterDuplicates list
+        in
         details [ class "characters" ]
             [ summary [] [ text label ]
             , ul []
@@ -95,7 +100,7 @@ charactersDetails rolodex label list =
                             Nothing ->
                                 li [] [ text "character not found???" ]
                     )
-                    list
+                    dedupedList
                 )
             ]
 
@@ -133,7 +138,7 @@ establishment rolodex { name, description, positions } =
 character : CharacterKey -> Character -> Html Msg
 character characterKey characterRecord =
     let
-        { name, age, description, hitPoints, maxHitPoints } =
+        { name, age, description } =
             characterRecord
     in
     details [ class "character" ]
@@ -141,6 +146,14 @@ character characterKey characterRecord =
         , p [] [ fromInt age ++ " years old." |> text ]
         , descriptionParagraphs description
         , p [] [ "HP " |> text, hitPointsInput characterKey characterRecord ]
+        ]
+
+
+image : Image -> Html Msg
+image { name, src } =
+    details [ class "image" ]
+        [ summary [] [ text name ]
+        , img [ Attr.src src ] []
         ]
 
 
@@ -168,7 +181,15 @@ descriptionParagraphs descriptionText =
     String.split "---" descriptionText
         |> List.map
             (\textSection ->
-                p [] [ text textSection ]
+                let
+                    trimmed =
+                        String.trim textSection
+                in
+                if trimmed |> String.startsWith "https://" then
+                    p [] [ a [ Attr.href trimmed ] [ text trimmed ] ]
+
+                else
+                    p [] [ text textSection ]
             )
         |> section [ class "description" ]
 
@@ -178,4 +199,5 @@ view model =
     main_ []
         [ section [] <| List.map (town model.rolodex) model.towns
         , section [] <| List.map (scenario model.rolodex) model.scenarios
+        , section [] <| List.map image model.images
         ]

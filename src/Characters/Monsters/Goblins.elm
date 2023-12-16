@@ -11,7 +11,7 @@ import Types exposing (Character, Race(..))
 
 deadGoblinKilledBySpiderInCrevice : Character
 deadGoblinKilledBySpiderInCrevice =
-    { name = "Dead Goblin Killed By Spider In Crevice"
+    { name = "Dead Goblin Killed by Spider in Crevice"
     , description = """
     A dead goblin killed by a spider in a crevice. It's wrapped tightly in webbing.
     ---
@@ -28,7 +28,7 @@ deadGoblinKilledBySpiderInCrevice =
 
 stargTheLeaping : Character
 stargTheLeaping =
-    { name = "Starg The Leaping"
+    { name = "Starg the Leaping"
     , description = """
     Starg is tall for a goblin, at 4' 2" tall, and has a long, thin face with a large nose.
     """
@@ -41,7 +41,7 @@ stargTheLeaping =
 
 digrikTheAngry : Character
 digrikTheAngry =
-    { name = "Digrik The Angry"
+    { name = "Digrik the Angry"
     , description = """An angry goblin."""
     , age = 20
     , hitPoints = 5
@@ -52,7 +52,7 @@ digrikTheAngry =
 
 stinkflankTheStinky : Character
 stinkflankTheStinky =
-    { name = "Stinkflank The Stinky"
+    { name = "Stinkflank the Stinky"
     , description = """A stinky goblin."""
     , age = 22
     , hitPoints = 9
@@ -63,7 +63,7 @@ stinkflankTheStinky =
 
 grubGrubTheUnwholesome : Character
 grubGrubTheUnwholesome =
-    { name = "Grub Grub The Unwholesome"
+    { name = "Grub Grub the Unwholesome"
     , description = """A goblin with a bad attitude."""
     , age = 9
     , hitPoints = 8
@@ -74,7 +74,7 @@ grubGrubTheUnwholesome =
 
 bearBelchTheBelcher : Character
 bearBelchTheBelcher =
-    { name = "Bear Belch The Belcher"
+    { name = "Bear Belch the Belcher"
     , description = """A goblin with a penchant for belching."""
     , age = 10
     , hitPoints = 7
@@ -85,7 +85,7 @@ bearBelchTheBelcher =
 
 redEyeTheLazy : Character
 redEyeTheLazy =
-    { name = "Red Eye The Lazy"
+    { name = "Red Eye the Lazy"
     , description = """A goblin who is lazy. Even lazier than most."""
     , age = 30
     , hitPoints = 4
@@ -96,7 +96,7 @@ redEyeTheLazy =
 
 wormFingersTheSlimy : Character
 wormFingersTheSlimy =
-    { name = "Worm Fingers The Slimy"
+    { name = "Worm Fingers the Slimy"
     , description = """A goblin who is always picking his nose."""
     , age = 8
     , hitPoints = 10
@@ -107,7 +107,7 @@ wormFingersTheSlimy =
 
 krudrukTheThirsty : Character
 krudrukTheThirsty =
-    { name = "Krudruk The Thirsty"
+    { name = "Krudruk the Thirsty"
     , description = """A goblin who is always thirsty."""
     , age = 25
     , hitPoints = 3
@@ -118,10 +118,12 @@ krudrukTheThirsty =
 
 oculusTheRecordKeeper : Character
 oculusTheRecordKeeper =
-    { name = "Oculus The Record Keeper"
+    { name = "Oculus the Record Keeper"
     , description = """
-    A goblin with bulbous eyes, one of which is behind a jewler's loupe as he inspects some ore.
+    A goblin with bulbous eyes, one of which is behind a jewler's loupe as he inspects ore.
     In his other hand he holds a book, while gritting an inked quill between his teeth.
+    ---
+    The book holds records of mine outputs and trades made to Ser Gallänt.
     """
     , age = 33
     , hitPoints = 4
@@ -132,7 +134,7 @@ oculusTheRecordKeeper =
 
 grabbeyTheDiaperWagger : Character
 grabbeyTheDiaperWagger =
-    { name = "Grabbey The Diaper Wagger"
+    { name = "Grabbey the Diaper Wagger"
     , description = """
     A tiny goblin with a dirty diaper, which he wags at the characters.
     He gestures towards the marble sand-pit, inviting them to play.
@@ -149,7 +151,7 @@ grabbeyTheDiaperWagger =
 
 crankleTheCrotchety : Character
 crankleTheCrotchety =
-    { name = "Crankle The Crotchety"
+    { name = "Crankle the Crotchety"
     , description = """
     An old goblin with milky eyes that probably should have died a long time ago.
     He leans on a cane and has a horrible bend to his back.
@@ -165,18 +167,134 @@ crankleTheCrotchety =
     }
 
 
-nilgobTheTaskmaster : Character
-nilgobTheTaskmaster =
-    { name = "Nilgob The Taskmaster"
+nilgobTheDisposable : Character
+nilgobTheDisposable =
+    { name = "Nilgob the Disposable"
     , description = """
-    A big goblin shouting orders at the miners constantly.
-    He's beating a drum with one hand, and holding the leash of a worg in the other hand.
-    ---
-    AC 15, not 17 because he's not using a shield.
+    A mining goblin holding a pickaxe. Seems awfully tired.
+    """
+    , age = 15
+    , hitPoints = 6
+    , maxHitPoints = 6
+    , race = Goblin
+    }
+
+
+gaffoTheSweaty : Character
+gaffoTheSweaty =
+    { name = "Gaffo the Sweaty"
+    , description = """
+    A mining goblin holding a pickaxe. Sweats profusely.
+    """
+    , age = 15
+    , hitPoints = 7
+    , maxHitPoints = 7
+    , race = Goblin
+    }
+
+
+snarlerTheJagged : Character
+snarlerTheJagged =
+    { name = "Snarler the Jagged"
+    , description = """
+    A mining goblin holding a pickaxe. Snarls and has very pointy teeth.
+    """
+    , age = 17
+    , hitPoints = 7
+    , maxHitPoints = 7
+    , race = Goblin
+    }
+
+
+bubblyTheProfuse : Character
+bubblyTheProfuse =
+    { name = "Bubbly the Profuse"
+    , description = """
+    A mining goblin holding a shovel. Seems to actually like working and won't stop talking about it.
+    """
+    , age = 14
+    , hitPoints = 3
+    , maxHitPoints = 3
+    , race = Goblin
+    }
+
+
+gopherTheDownDigger : Character
+gopherTheDownDigger =
+    { name = "Gopher the Down-Digger"
+    , description = """
+    A mining goblin holding a shovel. Always wants to dig deeper. Thinks that's where all the riches are.
+    """
+    , age = 14
+    , hitPoints = 7
+    , maxHitPoints = 7
+    , race = Goblin
+    }
+
+
+wheelsTheBarrowDevil : Character
+wheelsTheBarrowDevil =
+    { name = "Wheels the Barrow Devil"
+    , description = """
+    A goblin who loves wheel barrows and thinks they should go as fast as possible, always. 
+    Loves running around, picking up ore and carting it about.
+    """
+    , age = 18
+    , hitPoints = 8
+    , maxHitPoints = 8
+    , race = Goblin
+    }
+
+
+durfTheSimple : Character
+durfTheSimple =
+    { name = "Durf the Simple"
+    , description = """
+    A goblin with a big hammer and spike who uses those to clang big holes into the rock-face.
+    """
+    , age = 19
+    , hitPoints = 8
+    , maxHitPoints = 8
+    , race = Goblin
+    }
+
+
+pilseyThePious : Character
+pilseyThePious =
+    { name = "Pilsey the Pious"
+    , description = """
+    A goblin who hates working and is always taking breaks to pray that their god sends them more slaves.
+    """
+    , age = 10
+    , hitPoints = 6
+    , maxHitPoints = 6
+    , race = Goblin
+    }
+
+
+rufusTheRatWearer : Character
+rufusTheRatWearer =
+    { name = "Rufus the Rat-Wearer"
+    , description = """
+    A goblin who decorates himself with necklaces made of dead rats.
+    """
+    , age = 12
+    , hitPoints = 8
+    , maxHitPoints = 8
+    , race = Goblin
+    }
+
+
+galgusTheWorgTamer : Character
+galgusTheWorgTamer =
+    { name = "Galgus the Worg-Tamer"
+    , description = """
+    A goblin with scars: claw and bite marks on his face, ears, arms, legs.
+    He is more perceptive than most, and likes to use terrain to his advantage.
     """
     , age = 40
-    , hitPoints = 18
-    , maxHitPoints = 18
+    , hitPoints = 11
+    , maxHitPoints = 11
     , race = Goblin
     }
 
@@ -192,5 +310,23 @@ ultraGourmande =
     , age = 20
     , hitPoints = 5
     , maxHitPoints = 5
+    , race = Goblin
+    }
+
+
+drumBeater : Character
+drumBeater =
+    { name = "Drum Beater the Beautiful"
+    , description = """
+    A goblin that wears a sort of bandana over its slick black hair, and wears silver jewelry on its neck, ears, and wrists.
+    He wears a chain shirt, and has a javelin strapped to his back.
+    When engaged with leading the mining, it's beating a big drum to keep the workers digging, while holding Bone Gnawer's leash in the other hand.
+    On his hip is a scimitar, and his shield is propped up against the drum.
+    ---
+    This is a Goblin Boss.
+    """
+    , age = 21
+    , hitPoints = 27
+    , maxHitPoints = 27
     , race = Goblin
     }

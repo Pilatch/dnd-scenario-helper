@@ -13,12 +13,17 @@ import View exposing (view)
 main =
     sandbox
         { init =
-            { towns = [ Towns.phandalin ]
+            { towns = [ Towns.phandalin, Towns.leilon ]
             , rolodex = Characters.All.all
             , scenarios =
                 [ Scenarios.DwarvenExcavation.dwarvenExcavation
                 , Scenarios.LavendarSpiders.lavendarSpiders
                 , Scenarios.GoblinMine.goblinMine
+                ]
+            , images =
+                [ { name = "Sword Coast Map", src = "./assets/images/sword-coast-map.webp" }
+                , { name = "Leilon Map", src = "./assets/images/leilon.webp" }
+                , { name = "Phandalin Map", src = "./assets/images/phandalin.webp" }
                 ]
             }
         , view = view

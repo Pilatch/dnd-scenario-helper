@@ -274,6 +274,6 @@ giantMiningChamber =
     There are a few goblins in here, digging.
     Also digging is Telly Scornlove and Erwin and Emma, dressed in burlap sacks.
     """
-    , characters = [ BoneGnawer ]
+    , characters = [ DrumBeaterTheBeautiful, BoneGnawer, NilgobTheDisposable, GaffoTheSweaty ] --TODO add more!
     , adjoining = DeadEnd
     }

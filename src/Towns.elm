@@ -5,6 +5,21 @@ import Establishments exposing (..)
 import Types exposing (CharacterKey(..), Town)
 
 
+leilon : Town
+leilon =
+    { name = "Leilon"
+    , description = """
+    https://forgottenrealms.fandom.com/wiki/Leilon
+    """
+    , lore = ""
+    , residents =
+        [ Gallänt
+        , Dolgmissile
+        ]
+    , establishments = []
+    }
+
+
 phandalin : Town
 phandalin =
     { name = "Phandalin"

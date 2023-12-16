@@ -11,7 +11,12 @@ type alias Model =
     { towns : List Town
     , rolodex : Rolodex
     , scenarios : List Scenario
+    , images : List Image
     }
+
+
+type alias Image =
+    { name : String, src : String }
 
 
 type Msg
@@ -81,6 +86,7 @@ type Race
     | Halfling
     | Tiefling
     | Cow
+    | Horse
     | Orc
     | Goblin
     | Spider
@@ -118,9 +124,13 @@ type CharacterKey
     | OculusTheRecordKeeper
     | GrabbeyTheDiaperWagger
     | CrankleTheCrotchety
-    | NilgobTheTaskmaster
-    | BoneGnawer
     | UltraGourmande
+    | NilgobTheDisposable
+    | GaffoTheSweaty
+    | DrumBeaterTheBeautiful
+    | BoneGnawer
     | Zoll
     | Ghog
     | Dhoman
+    | Gallänt
+    | Dolgmissile

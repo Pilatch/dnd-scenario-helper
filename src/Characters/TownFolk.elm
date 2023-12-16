@@ -271,3 +271,68 @@ norbus =
     , maxHitPoints = 4
     , race = Dwarf
     }
+
+
+gallänt : Character
+gallänt =
+    { name = "Ser Gallänt of Goldtooth"
+    , description = """
+        A man with long gray hair, tied behind his head in a pony-tail, with a fair-skinned, youthful, but unemotional face.
+        He wears a chain mail shirt and carries a long sword.
+        ---
+        He speaks with disdain for nearly everyone around him, and finds all services lacking.
+        The townsfolk in Phandalin know him, and poke fun of him whenever possible, calling him Ser Gallant (with a short "a" sound), and he always corrects them.
+        If he does smile, you might glimpse that both his top canine teeth are gilded with gold.
+        He is impatient will only stop momentarily to meeting his needs, as his business dealings are top priority.
+        On his brief visits to Phandalin, his horse, Dolgmissile can be seen tied up outside the Stonehill Inn, its cart still attached, with a heavy crossbow hanging behind the saddle.
+        ---
+        An aspiring noble with a burgeoning business of supplying blacksmiths in nearby Leilon.
+        Once every few weeks he would make a trek from Leilon to Phandalin, picking up an order of coal or charcoal, and wrought iron.
+        He would tow a simple cart behind his horse, and load it with what he purchased from the Phandalin Miner's Exchange.
+        ---
+        One day along his trek, he was greeted by a small, cloaked figure on the side of the tail.
+        The only thing Ser Gallänt noticed about the figure is glint of what might been glasses it wore.
+        The figure suggested to fill his empty cart on the way to Phandalin, with unrefined silver ore, to be exchanged for currency, and would pay Ser Gallänt a fee.
+        Ser Gallänt asked how he would find this person again, and the cloaked figure said they always watch that road, and would see him coming.
+        This arrangement was no inconvenience to Ser Gallänt, and so he accepted, and has been performing this duty for the past few months.
+        ---
+        Alignment: Lawful Neutral
+        ---
+        Speed: 30ft
+        ---
+        Armor class: 15 (Chain shirt)
+        ---
+        STR 13 (+1), DEX 16 (+3), CON 16 (+3), INT 12 (+1), WIS 12 (+1), CHA 10 (+0)
+        ---
+        Acrobatics +5, Athletics +3, Intimidation +2, Perception +3, passive perception 13, proficiency bonus +2
+        ---
+        Action surge (1/rest) - takes one additional action.
+        ---
+        Minor Riposte (1/day), bonus action - When a creature misses him with a melee attack, he can take a bonus action to make a melee weapon attack.
+        ---
+        Trip - On any attack hit, target must succeed on a DC 13 Strength saving throw, or be knocked prone.
+        ---
+        Longsword: +5 to hit, 1d8 +3 slashing, range 5ft
+        ---
+        Heavy Crossbow: +3 to hit, 1d10 piercing, range 100/400ft
+        """
+    , age = 33
+    , hitPoints = 34
+    , maxHitPoints = 34
+    , race = Human
+    }
+
+
+dolgmissile : Character
+dolgmissile =
+    { name = "Dolgmissile"
+    , description = """
+    silvery-maned, gray riding horse
+    ---
+    https://roll20.net/compendium/dnd5e/Riding%20Horse#content
+    """
+    , age = 6
+    , hitPoints = 12
+    , maxHitPoints = 12
+    , race = Horse
+    }
