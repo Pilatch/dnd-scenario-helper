@@ -98,7 +98,7 @@ charactersDetails rolodex label list =
                                 li [] [ character characterKey foundCharacter ]
 
                             Nothing ->
-                                li [] [ text "character not found???" ]
+                                li [] [ text <| "character not found: " ++ Debug.toString characterKey ]
                     )
                     dedupedList
                 )

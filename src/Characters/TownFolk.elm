@@ -3,17 +3,81 @@ module Characters.TownFolk exposing (..)
 import Types exposing (Character, Race(..))
 
 
-bobby : Character
-bobby =
+bobbyBrinwild : Character
+bobbyBrinwild =
     { name = "Bobby Brinwild"
     , description = """
-    Has blonde hair that is so short and thin that he almost looks bald.
+    Young boy who has blonde hair that is so short and thin that he almost looks bald.
+    He's wearing crude clothing fashioned from a burlap grain sac, and is covered in dirt.
+    ---
+    Is sweet and meak, but hates the goblins with a passion.
     """
     , age = 10
     , hitPoints = 3
     , maxHitPoints = 3
     , race = Human
     }
+
+
+emmaLuar : Character
+emmaLuar =
+    { name = "Emma Luar"
+    , description = """
+    Young lady with long black hair that seems to always want to cover half her face.
+    Her eyes are very dark and alert, but she doesn't want to say much other than, "I miss home."
+    Dressed in a pair of burlap grain sacs. Covered in rock dust.
+    Holding a shovel and scooping into a nearby wheelbarrow.
+    ---
+    Child of a local farmer. Eddie Luar.
+    Will fight the goblins if she sees the players have a chance at beating them.
+    ---
+    Last seen heading North to Neverwinter, or so the townfolk thought.
+    Really she and her brother went to Leilon in search of cheap booze for college, and they were nabbed on that road.
+    """
+    , age = 19
+    , hitPoints = 8
+    , maxHitPoints = 8
+    , race = Human
+    }
+
+
+erwinLuar : Character
+erwinLuar =
+    { name = "Erwin Luar"
+    , description = """
+    Young man with shoulder-length black hair that seems to always want to cover half his face.
+    His eyes are very dark and alert, but he doesn't say much other than, "I'm hungry."
+    Dressed in one burlap grain sac around his waist. Covered in rock dust.
+    Holding a pickaxe and mining at the wall.
+    ---
+    Child of a local farmer. Eddie Luar.
+    Will fight the goblins if she sees the players have a chance at beating them.
+    """
+    , age = 19
+    , hitPoints = 8
+    , maxHitPoints = 8
+    , race = Human
+    }
+
+
+tellyScornlove : Character
+tellyScornlove =
+    { name = "Telly Scornlove"
+    , description = """
+        A freckle-faced woman in her early thirties, of ample, healthy figure and a voice to match.
+        She never stops complaining about the goblins, and seems to talk her way through her toil.
+        """
+    , age = 31
+    , hitPoints = 6
+    , maxHitPoints = 6
+    , race = Human
+    }
+
+
+
+--TODO: make these characters who are enslaved in the mine:
+-- Telly Scornlove, reward is 5gp.
+-- Old Bill is missing, but there's not a reward for him.
 
 
 elmar : Character

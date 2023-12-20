@@ -94,7 +94,10 @@ type Race
 
 
 type CharacterKey
-    = Bobby
+    = BobbyBrinwild
+    | EmmaLuar
+    | ErwinLuar
+    | TellyScornlove
     | Elmar
     | Adabra
     | Ander
@@ -127,6 +130,9 @@ type CharacterKey
     | UltraGourmande
     | NilgobTheDisposable
     | GaffoTheSweaty
+    | GalgusTheWorgTamer
+    | RufusTheRatWearer
+    | PilseyThePious
     | DrumBeaterTheBeautiful
     | BoneGnawer
     | Zoll

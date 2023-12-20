@@ -4,9 +4,9 @@ import Types exposing (Character, Race(..))
 
 
 
--- goblins are adults around 8, and can live to 60
--- they are usually 3 to 3.5 feet tall
--- their arms nearly reach their knees
+-- Goblins are adults around 8, and can live to 60.
+-- They are usually 3 to 3.5 feet tall.
+-- Their arms nearly reach their knees.
 
 
 deadGoblinKilledBySpiderInCrevice : Character
@@ -184,7 +184,7 @@ gaffoTheSweaty : Character
 gaffoTheSweaty =
     { name = "Gaffo the Sweaty"
     , description = """
-    A mining goblin holding a pickaxe. Sweats profusely.
+    A mining goblin holding a pickaxe. Sweats profusely, and has weirdly bushy armpit-hair.
     """
     , age = 15
     , hitPoints = 7
@@ -236,7 +236,7 @@ wheelsTheBarrowDevil : Character
 wheelsTheBarrowDevil =
     { name = "Wheels the Barrow Devil"
     , description = """
-    A goblin who loves wheel barrows and thinks they should go as fast as possible, always. 
+    A goblin who loves wheel barrows and thinks they should go as fast as possible, always.
     Loves running around, picking up ore and carting it about.
     """
     , age = 18
@@ -290,7 +290,10 @@ galgusTheWorgTamer =
     { name = "Galgus the Worg-Tamer"
     , description = """
     A goblin with scars: claw and bite marks on his face, ears, arms, legs.
+    Smokes cigars.
+    ---
     He is more perceptive than most, and likes to use terrain to his advantage.
+    Holds 2d4 silver pieces.
     """
     , age = 40
     , hitPoints = 11

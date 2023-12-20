@@ -1,8 +1,8 @@
 module Scenarios.GoblinMine exposing (goblinMine)
 
-import Characters.Monsters.Goblins exposing (bearBelchTheBelcher, crankleTheCrotchety, digrikTheAngry, grabbeyTheDiaperWagger, krudrukTheThirsty, oculusTheRecordKeeper, redEyeTheLazy, stargTheLeaping, ultraGourmande, wormFingersTheSlimy)
+import Characters.Monsters.Goblins exposing (bearBelchTheBelcher, crankleTheCrotchety, digrikTheAngry, galgusTheWorgTamer, grabbeyTheDiaperWagger, krudrukTheThirsty, oculusTheRecordKeeper, redEyeTheLazy, stargTheLeaping, ultraGourmande, wormFingersTheSlimy)
 import Characters.Monsters.Worgs exposing (boneGnawer)
-import Characters.TownFolk exposing (bobby, delilah)
+import Characters.TownFolk exposing (bobbyBrinwild, delilah)
 import Types exposing (Adjoining(..), CharacterKey(..), Location, Scenario)
 
 
@@ -56,7 +56,21 @@ abandonedMineEntrance =
     A great tree has grown into the hillside above it, roots wrapping around the arch like tentacles.
     """
     , characters = []
-    , adjoining = Adjoining [ abandonedMineLift ]
+    , adjoining = Adjoining [ abandonedMineLift, torrentialDownpourAfterScenarioCompletion ]
+    }
+
+
+torrentialDownpourAfterScenarioCompletion : Location
+torrentialDownpourAfterScenarioCompletion =
+    { name = "Torrential Downpour after scenario completion"
+    , description = """
+        As you approach the exit, you see water trickling into the mine, and hear a muted, constant roar from outside.
+        The end of the tunnel should be bright with mid-afternoon sunlight, but instead the sky is dark gray.
+        Outside the the stone arch entrance to the mine, you can see rain coming down in sheets.
+        You can't see very far outside as the rain obscures your vision.
+        """
+    , characters = []
+    , adjoining = DeadEnd
     }
 
 
@@ -148,7 +162,7 @@ dormitory =
     ---
     One chest is locked, and contains 50 gp, and a potion of healing.
     The key is under the rug.
-    The other chests are filled with clothes, and personal effects.
+    The other chests are filled with clothes and personal effects, some belonging to goblins, others belonging to the people they enslaved.
     """
     , characters = [ CrankleTheCrotchety, GrabbeyTheDiaperWagger ]
     , adjoining = Adjoining [ privy, kitchen ]
@@ -208,54 +222,72 @@ greatRoom =
     They awkwardly try to remain behind the table while shooting arrows, and bicker with each other about who can retain cover.
     """
     , characters = [ OculusTheRecordKeeper, KrudrukTheThirsty, RedEyeTheLazy, BearBelchTheBelcher ]
-    , adjoining = Adjoining [ dustyStoreRoom, dampChamber, collapsedProspect, longTunnel, giantMiningChamber ]
+    , adjoining = Adjoining [ dustyStoreRoom, collapsedProspect, longTunnel, dampChamber, giantMiningChamber ]
     }
 
 
 dustyStoreRoom : Location
 dustyStoreRoom =
-    { name = "Dusty Store Room"
+    { name = "Dusty Store Room (3 o'clock from great room)"
     , description = """
-    This room has one dusty crate in a corner with red lettering on it, in what appears to be Dwarven.
-    A pool of water is in the opposite corner, in a depression in the floor.
-    The other walls are propped up with timers, and sagging.
+    This is a dusty room with a pool of water is in one corner, in a depression in the floor.
+    The other walls are propped up with timbers, and sagging.
+    There are two timbers, standing straight up, in the center of the room, supporting the ceiling. They look sturdy.
+    In the far left corner is dusty crate in a corner with red lettering on it, in what appears to be Dwarven runes.
+    Sitting atop that crate is a mean looking goblin smoking a cigar, and winding the grip on his short bow.
     ---
-    It reads: Explosives.
-    Does 3d6 bludgeoning damage in a 10 foot radius, and ignites things not worn or carried.
+    The crate reads: Explosives.
+    Inside the crate are three red, paper-maché cylinders each about 3 inches in diameter, and 8 inches tall, with a fuse on top.
+    They weigh about ten pounds each.
+    Upon explosion, each cylinder does 3d6 bludgeoning damage in a 10 foot radius, and ignites things not worn or carried.
 
     """
-    , characters = []
-    , adjoining = DeadEnd
-    }
-
-
-dampChamber : Location
-dampChamber =
-    { name = "Damp Chamber"
-    , description = """
-    Down a twisted, roughly hewn passage is a room with a pool of water, a steady drip from the ceiling, and wooden beams propping up the walls and ceiling.
-    Inside is a huddled child, dressed in a burlap sac.
-    He's trying to break his shackles with a rock.
-    """
-    , characters = [ Bobby ]
+    , characters = [ GalgusTheWorgTamer ]
     , adjoining = DeadEnd
     }
 
 
 collapsedProspect : Location
 collapsedProspect =
-    { name = "Collapsed Prospect"
+    { name = "Collapsed Prospect (5 o'clock from great room)"
     , description = """
-    This room is filled with rubble, and a few goblins are digging through it.
+    This room is filled with rubble, and one goblin is sifting through and examining it.
+    ---
+    If he notices the players, he's able to sneak through a thin crevice to the left of the rubble pile.
     """
-    , characters = []
+    , characters = [ OculusTheRecordKeeper ]
+    , adjoining = DeadEnd
+    }
+
+
+giantMiningChamber : Location
+giantMiningChamber =
+    { name = "Giant Mining Chamber (6 o'clock from great room)"
+    , description = """
+    This room is huge, and its sagging ceiling is supported by thick beams placed throughout.
+    There are wooden beams propping up the walls and ceiling.
+    There are a few goblins in here, digging.
+    Also digging is Telly Scornlove and Erwin and Emma, dressed in burlap sacks.
+    """
+    , characters =
+        [ DrumBeaterTheBeautiful
+        , BoneGnawer
+        , NilgobTheDisposable
+        , GaffoTheSweaty
+        , GalgusTheWorgTamer
+        , RufusTheRatWearer
+        , PilseyThePious
+        , EmmaLuar
+        , ErwinLuar
+        , TellyScornlove
+        ]
     , adjoining = DeadEnd
     }
 
 
 longTunnel : Location
 longTunnel =
-    { name = "Long Tunnel"
+    { name = "Long Tunnel (7 o'clock from great chamber)"
     , description = """
     This tunnel is long, dark, and winding.  At the end is a pool of water.  There are fish swimming in there!
     Inside is Old Bill, trying to catch a fish with his bare hands.
@@ -265,15 +297,14 @@ longTunnel =
     }
 
 
-giantMiningChamber : Location
-giantMiningChamber =
-    { name = "Giant Mining Chamber"
+dampChamber : Location
+dampChamber =
+    { name = "Damp Chamber (9 o'clock from great room)"
     , description = """
-    This room is huge, and its sagging ceiling is supported by thick beams placed throughout.
-    There are wooden beams propping up the walls and ceiling.
-    There are a few goblins in here, digging.
-    Also digging is Telly Scornlove and Erwin and Emma, dressed in burlap sacks.
+    Down a twisted, roughly hewn passage is a room with a pool of water, a steady drip from the ceiling, and wooden beams propping up the walls and ceiling.
+    Inside is a huddled child, dressed in a burlap sac.
+    He's trying to break his shackles with a rock.
     """
-    , characters = [ DrumBeaterTheBeautiful, BoneGnawer, NilgobTheDisposable, GaffoTheSweaty ] --TODO add more!
+    , characters = [ BobbyBrinwild ]
     , adjoining = DeadEnd
     }

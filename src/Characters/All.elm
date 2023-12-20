@@ -12,7 +12,10 @@ import Types exposing (CharacterKey(..), Rolodex)
 all : Rolodex
 all =
     Characters.Rolodex.fromList
-        [ ( Bobby, bobby )
+        [ ( BobbyBrinwild, bobbyBrinwild )
+        , ( EmmaLuar, emmaLuar )
+        , ( ErwinLuar, erwinLuar )
+        , ( TellyScornlove, tellyScornlove )
         , ( Elmar, elmar )
         , ( Adabra, adabra )
         , ( Ander, ander )
@@ -51,4 +54,8 @@ all =
         , ( Gallänt, gallänt )
         , ( Dolgmissile, dolgmissile )
         , ( DrumBeaterTheBeautiful, drumBeater )
+        , ( GalgusTheWorgTamer, galgusTheWorgTamer )
+        , ( RufusTheRatWearer, rufusTheRatWearer )
+        , ( PilseyThePious, pilseyThePious )
+        , ( GaffoTheSweaty, gaffoTheSweaty )
         ]
