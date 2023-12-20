@@ -98,6 +98,7 @@ type CharacterKey
     | EmmaLuar
     | ErwinLuar
     | TellyScornlove
+    | OldBill
     | Elmar
     | Adabra
     | Ander

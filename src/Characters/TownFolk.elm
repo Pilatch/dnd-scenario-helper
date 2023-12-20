@@ -66,6 +66,11 @@ tellyScornlove =
     , description = """
         A freckle-faced woman in her early thirties, of ample, healthy figure and a voice to match.
         She never stops complaining about the goblins, and seems to talk her way through her toil.
+        She's using a hammer and chisel against a wall.
+        ---
+        Back home, she runs her own bakery.
+        Her house was broken into by the goblins one night, and she was kidnapped.
+        Frequent customers of her bakery were the ones to come up with the reward for her return.
         """
     , age = 31
     , hitPoints = 6
@@ -74,10 +79,19 @@ tellyScornlove =
     }
 
 
-
---TODO: make these characters who are enslaved in the mine:
--- Telly Scornlove, reward is 5gp.
--- Old Bill is missing, but there's not a reward for him.
+oldBill : Character
+oldBill =
+    { name = "Old Bill"
+    , description = """
+    An old man with about as many teeth missing as remaining.
+    Has wispy white hair and a stubble-beard.
+    Surprisingly sunny disposition. Doesn't really have a place to live.
+    """
+    , age = 63
+    , hitPoints = 5
+    , maxHitPoints = 5
+    , race = Human
+    }
 
 
 elmar : Character
@@ -217,6 +231,8 @@ dazlyn =
     , description = """
     A shield dwarf prospector.
     Business partner with Norbus Ironrune.
+    Always whispering, although unnecessary.
+    Has a beautiful singing voice.
     """
     , age = 156
     , hitPoints = 4

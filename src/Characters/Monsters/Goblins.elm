@@ -293,6 +293,7 @@ galgusTheWorgTamer =
     Smokes cigars.
     ---
     He is more perceptive than most, and likes to use terrain to his advantage.
+    Only speaks goblin language.
     Holds 2d4 silver pieces.
     """
     , age = 40

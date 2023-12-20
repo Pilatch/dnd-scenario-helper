@@ -274,7 +274,6 @@ giantMiningChamber =
         , BoneGnawer
         , NilgobTheDisposable
         , GaffoTheSweaty
-        , GalgusTheWorgTamer
         , RufusTheRatWearer
         , PilseyThePious
         , EmmaLuar
@@ -292,7 +291,7 @@ longTunnel =
     This tunnel is long, dark, and winding.  At the end is a pool of water.  There are fish swimming in there!
     Inside is Old Bill, trying to catch a fish with his bare hands.
     """
-    , characters = []
+    , characters = [ OldBill ]
     , adjoining = DeadEnd
     }
 

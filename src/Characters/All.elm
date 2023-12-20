@@ -16,6 +16,7 @@ all =
         , ( EmmaLuar, emmaLuar )
         , ( ErwinLuar, erwinLuar )
         , ( TellyScornlove, tellyScornlove )
+        , ( OldBill, oldBill )
         , ( Elmar, elmar )
         , ( Adabra, adabra )
         , ( Ander, ander )
